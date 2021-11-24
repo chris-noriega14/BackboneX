@@ -1,3 +1,4 @@
+[![Board Status](https://dev.azure.com/chrisnoriega14/69e8736a-6aa8-42e0-a231-7ae86fa9cf45/86e05d5b-7119-4dbe-8077-73df7edb8204/_apis/work/boardbadge/630ded65-02e2-4a32-aade-a78df65be3b5)](https://dev.azure.com/chrisnoriega14/69e8736a-6aa8-42e0-a231-7ae86fa9cf45/_boards/board/t/86e05d5b-7119-4dbe-8077-73df7edb8204/Microsoft.RequirementCategory)
 # Add Comments to Implementation of the MERN-stack Architecture
 
 ## Root-level Functionality

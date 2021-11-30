@@ -1,0 +1,42 @@
+[
+    {
+       "exerciseId": 4,
+       "loginEmail": "kevinTupik@gmail.com"
+    },
+    {
+        "exerciseId": 4,
+        "loginEmail": "Ashley.Rodriguez!%#$@gmail.com"
+    },
+    {
+        "exerciseId": 4,
+        "loginEmail": "Emma!Jones!@hotmail.com"
+    },
+    {
+        "exerciseId": 3,
+        "loginEmail": "tomsmith25@gmail.com"
+    },
+    {
+        "exerciseId": 3,
+        "loginEmail": "kevinTupik@gmail.com"
+    },
+    {
+        "exerciseId": 3,
+        "loginEmail": "Ashley.Rodriguez!%#$@gmail.com"
+    },
+    {
+        "exerciseId": 2,
+        "loginEmail": "tomsmith25@gmail.com"
+    },
+    {
+        "exerciseId": 2,
+        "loginEmail": "MIKECHAN54@hotmail.com"
+    },
+    {
+        "exerciseId": 1,
+        "loginEmail": "MIKECHAN54@hotmail.com"
+    },
+    {
+        "exerciseId": 1,
+        "loginEmail": "Ashley.Rodriguez!%#$@gmail.com"
+    }
+]

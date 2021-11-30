@@ -17,6 +17,10 @@ const exerciseSchema = new Schema({
     type: String,
     required: true,
   },
+  exerciseType: {
+    type: String,
+    required: true,
+  },
   startingTip: {
     type: String,
     required: true,

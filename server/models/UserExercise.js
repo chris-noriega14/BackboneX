@@ -15,6 +15,6 @@ const userExerciseSchema = new Schema({
   },
 });
 
-const userExercise = model('userExercise', userExerciseSchema);
+const UserExercise = model('userExercise', userExerciseSchema);
 
-module.exports = userExercise;
+module.exports = UserExercise;

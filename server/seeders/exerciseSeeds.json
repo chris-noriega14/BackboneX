@@ -1,42 +1,318 @@
 [
   {
-    "thoughtText": "Everyone knows that debugging is twice as hard as writing a program in the first place. So if you're as clever as you can be when you write it, how will you ever debug it?",
-    "thoughtAuthor": "Brian Kernighan"
+    "exerciseName": "Superman",
+    "exercisePath": "superman",
+    "imgStart": "resized_480x360_super_start.jpg",
+    "imgEnd": "resized_480x360_super_end.jpg",
+    "exerciseType": "ball",
+    "startingTip": "abc",
+    "endingTip": "abc"
+ },
+ {
+    "exerciseName": "Wall Squat",
+    "exercisePath": "wall_squat",
+    "imgStart": "squat_start_1.png",
+    "imgEnd": "squat_end_1.png",
+    "exerciseType": "ball",
+    "startingTip": "def",
+    "endingTip": "def"
+  },
+ {
+    "exerciseName": "Opposite Arm-Leg",
+    "exercisePath": "opposite_arm-leg",
+    "imgStart": "resized_480x360_opp_arm_start.jpg",
+    "imgEnd": "resized_480x360_opp_arm_end.jpg",
+    "exerciseType": "ball",
+    "startingTip": "def",
+    "endingTip": "def"
   },
   {
-    "thoughtText": "Some of the best programming is done on paper, really. Putting it into the computer is just a minor detail.",
-    "thoughtAuthor": "Max Kanat-Alexander"
+    "exerciseName": "Bicep Curl",
+    "exercisePath": "bicep curl",
+    "imgStart": "resized_500x666_Bicep_Curl_Start.jpg",
+    "imgEnd": "resized_500x666_Bicep_Curl_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "defgsdf",
+    "endingTip": "defddf"
   },
   {
-    "thoughtText": "When you don't create things, you become defined by your tastes rather than ability. Your tastes only narrow & exclude people. So create.",
-    "thoughtAuthor": "Why The Lucky Stiff"
+    "exerciseName": "Mid Trap Row",
+    "exercisePath": "mid_trap_row",
+    "imgStart": "resized_500x375_Mid_Trap_Row_Start.jpg",
+    "imgEnd": "resized_500x375_Mid_Trap_Row_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "Feel for a stretch accross your upper back in this postion.",
+    "endingTip": "Squeeze your shoulder blades together, but keep you chest lifted."
   },
   {
-    "thoughtText": "I'm not a great programmer; I'm just a good programmer with great habits.",
-    "thoughtAuthor": "Kent Beck"
+    "exerciseName": "Lateral Flexion",
+    "exercisePath": "lateral_flexion",
+    "imgStart": "resized_300x454_lat._flex._1.jpg",
+    "imgEnd": "resized_300x454_lat_flex_2.jpg",
+    "exerciseType": "stretches",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
   },
   {
-    "thoughtText": "Walking on water and developing software from a specification are easy if both are frozen.",
-    "thoughtAuthor": "Edward V. Berard"
+   "exerciseName": "Prone Extension",
+   "exercisePath": "prone_extension",
+   "imgStart": "resized_500x375_Prone_Extension_Start.jpg",
+   "imgEnd": "resized_500x375_Prone_Extension_End.jpg",
+   "exerciseType": "stretches",
+   "startingTip": "dfdfdfd",
+   "endingTip": "erererr"
   },
   {
-    "thoughtText": "The most disastrous thing that you can ever learn is your first programming language.",
-    "thoughtAuthor": "Alan Kay"
+    "exerciseName": "Retraction",
+    "exercisePath": "retraction",
+    "imgStart": "resized_300x334_retraction_1.jpg",
+    "imgEnd": "resized_300x341_retraction_2.jpg",
+    "exerciseType": "stretches",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
   },
   {
-    "thoughtText": "The most important property of a program is whether it accomplishes the intention of its user.",
-    "thoughtAuthor": "C.A.R. Hoare"
+   "exerciseName": "Retraction Extension",
+   "exercisePath": "retraction_extension",
+   "imgStart": "resized_300x341_ret_ext._1.jpg",
+   "imgEnd": "resized_300x315_ret_ext._2.jpg",
+   "exerciseType": "stretches",
+   "startingTip": "dfdfdfd",
+   "endingTip": "erererr"
   },
   {
-    "thoughtText": "Delivering good software today is often better than perfect software tomorrow, so finish things and ship.",
-    "thoughtAuthor": "David Thomas"
+   "exerciseName": "Rotation Extension",
+   "exercisePath": "rotation extension",
+   "imgStart": "resized_300x442_corner_1.jpg",
+   "imgEnd": "resized_300x442_corner_2.jpg",
+   "exerciseType": "stretches",
+   "startingTip": "dfdfdfd",
+   "endingTip": "erererr"
   },
   {
-    "thoughtText": "If you optimize everything, you will always be unhappy.",
-    "thoughtAuthor": "Donald Knuth"
+   "exerciseName": "Rotation Flextion",
+   "exercisePath": "rotation_flextion",
+   "imgStart": "resized_300x493_underarm_1.jpg",
+   "imgEnd": "resized_300x508_underarm_2.jpg",
+   "exerciseType": "stretches",
+   "startingTip": "dfdfdfd",
+   "endingTip": "erererr"
   },
   {
-    "thoughtText": "It's not a bug; it's an undocumented feature.",
-    "thoughtAuthor": "Anonymous"
+   "exerciseName": "Slide Glide",
+   "exercisePath": "slide_glide",
+   "imgStart": "resized_300x550_side_glide_1.jpg",
+   "imgEnd": "resized_300x597_side_glide_2.jpg",
+   "exerciseType": "stretches",
+   "startingTip": "dfdfdfd",
+   "endingTip": "erererr"
+  },
+  {
+   "exerciseName": "Standing Extension",
+   "exercisePath": "standing_extension",
+   "imgStart": "resized_500x666_Standing-Extension-Start_1.jpg",
+   "imgEnd": "resized_500x666_Standing_Extension_End.jpg",
+   "exerciseType": "stretches",
+   "startingTip": "dfdfdfd",
+   "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Ab Crunch",
+    "exercisePath": "ab_crunch",
+    "imgStart": "resized_480x360_ab_start.jpg",
+    "imgEnd": "resized_480x360_ab_end.jpg",
+    "exerciseType": "ball",
+    "startingTip": "Keep your chin tucked",
+    "endingTip": "Keep your chin tucked. Pull your low belly in."
+  },
+  {
+    "exerciseName": "Extension",
+    "exercisePath": "extension",
+    "imgStart": "resized_480x360_ext_start.jpg",
+    "imgEnd": "resized_480x360_ext_end.jpg",
+    "exerciseType": "ball",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Lunge",
+    "exercisePath": "lunge",
+    "imgStart": "lunge_start_1.png",
+    "imgEnd": "lunge_end_1.png",
+    "exerciseType": "ball",
+    "startingTip": "Keep your low belly pulled in, and your glutes activated.",
+    "endingTip": "If you feel pain in your knee ease up on the stretch."
+  },
+  {
+    "exerciseName": "Lat Pull",
+    "exercisePath": "lat_pull",
+    "imgStart": "resized_500x666_Lat_Pull_Start.jpg",
+    "imgEnd": "resized_500x666_Lat_Pull_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Low Trap Row",
+    "exercisePath": "low_trap_row",
+    "imgStart": "resized_500x375_Lower_Trap_Row_Start.jpg",
+    "imgEnd": "resized_500x375_Lower_Trap_Row_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Overhead Press",
+    "exercisePath": "overhead_press",
+    "imgStart": "resized_360x442_shoulder_press_a_1.png",
+    "imgEnd": "resized_360x428_shoulder_press_b_1.png",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Pec Push",
+    "exercisePath": "pec_push",
+    "imgStart": "resized_500x666_Pec_Push_Start.jpg",
+    "imgEnd": "resized_500x666_Pec_Push_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Retraction",
+    "exercisePath": "shoulder_ retraction",
+    "imgStart": "resized_500x375_Scapula_Retraction_Start.jpg",
+    "imgEnd": "resized_500x375_Scapula_Retraction_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Abduction",
+    "exercisePath": "shoulder_abduction",
+    "imgStart": "resized_360x406_shoulder_abduction_a_1.png",
+    "imgEnd": "resized_360x399_shoulder_abduction_b_1.png",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Extension",
+    "exercisePath": "shoulder_extension",
+    "imgStart": "resized_480x416_shoulder_extension_a_1.png",
+    "imgEnd": "resized_480x407_shoulder_extension_b_1.png",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Flexion",
+    "exercisePath": "shoulder_flexion",
+    "imgStart": "resized_480x360_shoulder_flexion_a_1.png",
+    "imgEnd": "resized_480x360_shoulder_flexion_a_1.png",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Eternal Rotation",
+    "exercisePath": "shoulder_external_rotation",
+    "imgStart": "resized_480x360_shoulder_ext._rotation_a.jpg",
+    "imgEnd": "resized_480x360_shoulder_external_rotation_b.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Internal Rotation",
+    "exercisePath": "shoulder_internal_rotation",
+    "imgStart": "resized_480x395_shoulder_internal_rotation_a_1.png",
+    "imgEnd": "resized_480x400_shoulder_internal_rotation_b_1.png",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Shoulder Shrug",
+    "exercisePath": "shoulder_shrug",
+    "imgStart": "resized_500x666_Shrug_Start.jpg",
+    "imgEnd": "resized_500x666_Shrug_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Triceps Push",
+    "exercisePath": "triceps push",
+    "imgStart": "resized_500x666_Tricep_Push_Start.jpg",
+    "imgEnd": "resized_500x666_Tricep_Push_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Upper Trap Row",
+    "exercisePath": "upper_trap_row",
+    "imgStart": "resized_500x375_Upper_Trap_Row_Start.jpg",
+    "imgEnd": "resized_500x375_Upper_Trap_Row_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Wrist Extension",
+    "exercisePath": "wrist extension",
+    "imgStart": "resized_500x666_Wrist_Extension_Start.jpg",
+    "imgEnd": "resized_500x666_Wrist_Extension_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Wrist Flexion",
+    "exercisePath": "wrist flexion",
+    "imgStart": "resized_500x666_Wrist_Flexion_Start.jpg",
+    "imgEnd": "resized_500x666_Wrist_Flexion_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  
+  {
+    "exerciseName": "Hip Flexion",
+    "exercisePath": "hip_flexion",
+    "imgStart": "resized_500x666_Hip_Flexion_Start.jpg",
+    "imgEnd": "resized_500x666_Hip_Flexion_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
+  },
+  {
+    "exerciseName": "Hip Abduction",
+    "exercisePath": "hip_abduction",
+    "imgStart": "resized_500x666_Hip_Abduction_Start.jpg",
+    "imgEnd": "resized_500x666_Hip_Abduction_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "Keep your abs activated",
+    "endingTip": "Keep a neutral spine"
+  },
+  {
+    "exerciseName": "Hip Adduction",
+    "exercisePath": "hip_adduction",
+    "imgStart": "resized_500x666_Hip_Adduction_Start.jpg",
+    "imgEnd": "resized_500x666_Hip_Adduction_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "Keep your abs active.",
+    "endingTip": "Feel for the muscle in your inner thigh."
+  },
+  {
+    "exerciseName": "Hip Extension",
+    "exercisePath": "hip_extension",
+    "imgStart": "resized_500x666_Hip_Extension_Start.jpg",
+    "imgEnd": "resized_500x666_Hip_Extension_End.jpg",
+    "exerciseType": "band",
+    "startingTip": "dfdfdfd",
+    "endingTip": "erererr"
   }
 ]

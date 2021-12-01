@@ -1,10 +1,10 @@
 const express = require('express');
-// const { ApolloServer } = require('apollo-server-express');
+const { ApolloServer } = require('apollo-server-express');
 const path = require('path');
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const mongoose = require('mongoose');
-// const { typeDefs, resolvers } = require('./schemas');
+const { typeDefs, resolvers } = require('./schemas');
 const sequelize = require('./config/connection');
 const model = require ('./models')
 const PORT = process.env.PORT || 3001;
@@ -22,12 +22,12 @@ mongoose.connect(
 );
 
 const db = mongoose.connection;
-// const server = new ApolloServer({
-//   typeDefs,
-//   resolvers,
-// });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
 
-// server.applyMiddleware({ app });
+server.applyMiddleware({ app });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
@@ -45,7 +45,7 @@ db.once('open', () => {
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => {
     console.log(`API server running on port ${PORT}!`);
-    // console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
+    console.log(`Use GraphQL at http://localhost:${PORT}${server.graphqlPath}`);
   });
 });
 })

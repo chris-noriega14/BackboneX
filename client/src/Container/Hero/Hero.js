@@ -1,6 +1,6 @@
 import './Hero.css';
-import Button from 'react-bootstrap/Button';
 import Login from './Login';
+import Signup from './Signup';
 
 function Hero() {
   return (
@@ -10,10 +10,8 @@ function Hero() {
     <div className="container position-relative" data-aos="fade-up" data-aos-delay="500">
       <h1>Welcome to BackBoneX</h1>
       <h3 className="hcolor">Please login to view exercises!</h3>
-<Login />
+<Login />    <Signup />
      
-     
-
   </div>
   </div>
     </div>

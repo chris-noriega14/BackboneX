@@ -13,7 +13,7 @@ function Nav() {
       </div>
       <div className="social-links d-none d-md-block">
 
-        <a href="#" className="twitter" ><i className="bx bxl-twitter"></i></a>
+        <a href="#" className="twitter"><i className="bx bxl-twitter"></i></a>
         <a href="#" className="facebook"><i className="bx bxl-facebook"></i></a>
         <a href="#" className="instagram"><i className="bx bxl-instagram"></i></a>
         <a href="#" className="linkedin"><i className="bx bxl-linkedin"></i></a>

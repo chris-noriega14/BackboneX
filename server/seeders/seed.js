@@ -26,7 +26,7 @@ db.once('open', async () => {
   await UserExercise.create(userExerciseSeeds);
 
   console.log('=======Seeds planted!=======');
-  process.exit(0);
+  // process.exit(0);
 });
 
 const seedAll = async () => {

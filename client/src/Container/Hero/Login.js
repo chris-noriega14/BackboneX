@@ -1,6 +1,7 @@
 import './Hero.css';
 import React, {useState} from 'react';
 import {Button, Modal} from 'react-bootstrap';
+import Signup from './Signup';
 
 
 function Login() {
@@ -19,15 +20,37 @@ function Login() {
           <Modal.Header closeButton>
             <Modal.Title>Login</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>    
+        <form action="/users/login" method="POST">
+        <div className="form-group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            className="form-control"
+            placeholder="Enter Email"
+          />
+        </div>
+        <div className="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            className="form-control"
+            placeholder="Enter Password"
+          />
+        </div>
+</form>
+          </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={handleClose}>
-              Close
-            </Button>
+   
             <Button variant="primary" onClick={handleClose}>
-              Save Changes
+              Login
             </Button>
           </Modal.Footer>
+    
         </Modal>
       </>
     );

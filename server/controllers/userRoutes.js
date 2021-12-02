@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const Users = require('../models/Users')
-
+const { signToken } = require('../utils/auth');
 router.post('/login', async (req, res) => {
   try {
 
@@ -18,16 +18,15 @@ router.post('/login', async (req, res) => {
       error_type = { error: "Your password or email is not correct." }
     }
 
-    console.log("you were logged in");
-
-    req.session.save(() => {
-      console.log("you were logged in");
-      req.session.user_id = usersData.id
-      req.session.email = usersData.email;
-      req.session.logged_in = true;
-
+   
+  
       
-    });
+      const token = signToken(UsersData);
+      console.log("test")
+      console.log(token)
+      return { token, UsersData };
+   
+
 
 
   } catch (err) {
@@ -74,16 +73,11 @@ router.post('/register', async (req, res) => {
           password: password
         });
 
-        req.session.save(() => {
-          req.session.user_id = newUsers.id
-          req.session.email = newUsers.email;
-          req.session.logged_in = true;
+        const token = signToken(newUsers)
 
-          res.render('dashboard', {
-            loggedIn: req.session.logged_in,
-            errors
-          });
-        });
+        return { token, newUsers };
+
+      
       }
     }
   } catch (err) {

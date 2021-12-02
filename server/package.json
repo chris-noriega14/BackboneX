@@ -21,6 +21,7 @@
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^10.0.0",
+    "jsonwebtoken": "^8.5.1",
     "express-session": "^1.17.2",
     "@popperjs/core": "^2.10.2"
   },

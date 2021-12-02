@@ -7,6 +7,7 @@ const mongoose = require('mongoose');
 // const { typeDefs, resolvers } = require('./schemas');
 const sequelize = require('./config/connection');
 const model = require ('./models')
+const routes = require('./controllers');
 const PORT = process.env.PORT || 3001;
 const app = express();
 
@@ -36,7 +37,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
 }
 
-
+app.use(routes);
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });

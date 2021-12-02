@@ -23,7 +23,7 @@ function Login() {
           <Modal.Body>    
         <form action="/users/login" method="POST">
         <div className="form-group">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
@@ -33,7 +33,7 @@ function Login() {
           />
         </div>
         <div className="form-group">
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"

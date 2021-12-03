@@ -1,0 +1,67 @@
+   /* Exercises */
+
+   .exercises .icon-box {
+    text-align: center;
+    padding: 80px 20px;
+    transition: all ease-in-out 0.3s;
+    border: #3e9bd8 dotted;
+    border-radius: 8px;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.1);
+  }
+  .exercises .icon-box .icon {
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    background: #29abe7;
+    transition: all 0.3s ease-out 0s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+  }
+  .exercises .icon-box .icon i {
+    color: #fff;
+    font-size: 28px;
+  }
+  .exercises .icon-box .icon::before {
+    position: absolute;
+    content: "";
+    left: -8px;
+    top: -8px;
+    height: 100%;
+    width: 100%;
+    background: #fce5e5;
+    transition: all 0.3s ease-out 0s;
+    transform: translateZ(-1px);
+  }
+  .exercises .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  .exercises .icon-box h4 a {
+    color: #191919;
+  }
+  .exercises .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  .exercises .icon-box:hover {
+    background: #29abe7;
+    border-color: #29abe7;
+    padding: 70px 20px 90px 20px;
+  }
+  .exercises .icon-box:hover .icon {
+    background: #fff;
+  }
+  .exercises .icon-box:hover .icon i {
+    color: #29abe7;
+  }
+  .exercises .icon-box:hover .icon::before {
+    background: #1f83bd;
+  }
+  .exercises .icon-box:hover h4 a, .exercises .icon-box:hover p {
+    color: #fff;
+  }

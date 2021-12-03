@@ -5,6 +5,12 @@ const resolvers = {
     exercises: async (parent, args) => {
       return Exercise.find({ exerciseType: args.type });
     },
+    bandExercises: async (parent, args) => {
+      return Exercise.find({ exerciseType: args.type });
+    },
+    stretchExercises: async (parent, args) => {
+      return Exercise.find({ exerciseType: args.type });
+    },
   },
 };
 

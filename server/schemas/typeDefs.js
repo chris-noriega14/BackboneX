@@ -2,6 +2,7 @@ const { gql } = require('apollo-server-express');
 
 const typeDefs = gql`
 type Exercise {
+  _id: ID
   exerciseName: String
   imgStart: String
   imgEnd:String

@@ -16,7 +16,7 @@ import './App.css';
 import Nav from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Contact from './Components/Contact/Contact'
-import Category from './Pages/Exercise/Category';
+// import Category from './Pages/Exercise/Category';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({

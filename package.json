@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "boxicons": "^2.1.0",
-    "buffer-equal-constant-time": "^1.0.1"
+    "buffer-equal-constant-time": "^1.0.1",
+    "react-icons": "^4.3.1"
   }
 }

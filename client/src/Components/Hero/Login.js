@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import Signup from './Signup';
 import loginApi from '../../utils/httpRoutes';
+import auth from "../../utils/auth"
 
 
 function Login() {
@@ -19,9 +20,9 @@ function Login() {
 
   const handleClose = () => {
     setShow(false)
-    
+
     loginApi.login(emailInput.current.value, passwordInput.current.value).then((res) => {
-      console.log(res);
+      auth.login(res.data.token);
     })
   }
   const handleShow = () => setShow(true);

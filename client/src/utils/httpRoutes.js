@@ -4,8 +4,6 @@ export default {
          return axios.post('/users/login', {
             "email": email,
             "password": password
-          }).then((res) => {
-            console.log(res);
           })
     }
 }

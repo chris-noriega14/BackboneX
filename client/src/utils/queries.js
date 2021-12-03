@@ -17,6 +17,7 @@ query getBandExercises {
   bandExercises (type: "band") {
     _id
     exerciseName
+    exercisePath
     imgStart
     imgEnd
   }
@@ -25,9 +26,10 @@ query getBandExercises {
 
 export const QUERY_STRETCH = gql`
 query getStretchExercises {
-  stretchExercises (type: "stretch") {
+  stretchExercises (type: "stretches") {
     _id
     exerciseName
+    exercisePath
     imgStart
     imgEnd
   }

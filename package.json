@@ -20,6 +20,7 @@
     "prettier": "^2.1.2"
   },
   "dependencies": {
+    "boxicons": "^2.1.0",
     "buffer-equal-constant-time": "^1.0.1"
   }
 }

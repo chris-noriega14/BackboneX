@@ -17,6 +17,7 @@ query getBandExercises {
   bandExercises (type: "band") {
     _id
     exerciseName
+    exercisePath
     imgStart
     imgEnd
   }
@@ -28,6 +29,7 @@ query getStretchExercises {
   stretchExercises (type: "stretch") {
     _id
     exerciseName
+    exercisePath
     imgStart
     imgEnd
   }

@@ -14,7 +14,7 @@ import './App.css';
 // import Login from './Components/Hero/Login';
 // import Exercises from './pages/Exercises';
 import Nav from './Components/Navbar/Navbar'
-// import Hero from './Components/Hero/Hero'
+import Hero from './Components/Hero/Hero'
 import Contact from './Components/Contact/Contact'
 import Category from './Pages/Exercise/Category';
 
@@ -60,8 +60,8 @@ function App() {
   return (
     <div>
 <Nav />
-{/* <Hero /> */}
-<Category />
+<Hero />
+{/* <Category /> */}
 <Contact />
 
 

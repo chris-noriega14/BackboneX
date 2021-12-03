@@ -6,17 +6,18 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
 
 // import Home from './pages/Home';
 // import Signup from './Components/Hero/Signup';
 // import Login from './Components/Hero/Login';
-// import Exercises from './pages/Exercises';
+import Mylist from '../src/Pages/Exercise/Mylist'
+import Exercises from '../src/Pages/Exercise/Exercises'
 import Nav from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Contact from './Components/Contact/Contact'
-// import Category from './Pages/Exercise/Category';
+import Category from './Pages/Exercise/Category';
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -58,15 +59,34 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <div>
-<Nav />
-<Hero />
-{/* <Category /> */}
-<Contact />
-
-
-    {/* <ApolloProvider client={client}>
+    <ApolloProvider client={client}>
       <Router>
+        <div className="flex-column justify-flex-start min-100-vh">
+          <Nav />
+          <div className="container">
+            <Route exact path="/">
+              <Hero />
+            </Route>
+            <Route exact path="/exercises">
+              <Category />
+            </Route>
+            <Route exact path="/mylist">
+              <Mylist />
+            </Route>
+            <Route exact path="/exercise/band">
+              <Exercises />
+            </Route>
+          </div>
+          <Contact />
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
+}
+
+
+    
+      {/* <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Nav />
           <div className="container">
@@ -79,17 +99,14 @@ function App() {
             <Route exact path="/signup">
               <Signup />
             </Route>
-            <Route exact path="/exercises">
-              <Exercises />
-            </Route>
+            
           </div>
           <Contact />
         </div>
       </Router>
-    </ApolloProvider> */}
-    </div>
-  );
-}
+     */}
+    
+
 
 export default App;
 

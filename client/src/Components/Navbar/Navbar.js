@@ -37,7 +37,7 @@ function Nav() {
 
 
                 <ul>
-                  <li><a className="nav-link scrollto active" href="/dashboard">Home</a></li>
+                  <li><a className="nav-link scrollto active" href="/">Home</a></li>
                   <li><a className="nav-link scrollto" href="/exercises">Exercises</a></li>
                   <li><a className="nav-link scrollto" href="/mylist">My List</a></li>
                   <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
@@ -49,7 +49,7 @@ function Nav() {
 
 
                 <ul>
-                  <li><a className="nav-link scrollto active" href="/dashboard">Home</a></li>
+                  <li><a className="nav-link scrollto active" href="/">Home</a></li>
                   <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
               </nav>

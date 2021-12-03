@@ -13,7 +13,10 @@ import './App.css';
 // import Signup from './Components/Hero/Signup';
 // import Login from './Components/Hero/Login';
 import Mylist from '../src/Pages/Exercise/Mylist'
-import Exercises from '../src/Pages/Exercise/Exercises'
+// import Exercises from '../src/Pages/Exercise/Exercises'
+import Ball from '../src/Pages/Exercise/Ball'
+import Stretch from '../src/Pages/Exercise/Stretch'
+import Band from '../src/Pages/Exercise/Band'
 import Nav from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Contact from './Components/Contact/Contact'
@@ -73,8 +76,14 @@ function App() {
             <Route exact path="/mylist">
               <Mylist />
             </Route>
+            <Route exact path="/exercise/ball">
+              <Ball />
+            </Route>
+            <Route exact path="/exercise/stretch">
+              <Stretch />
+            </Route>
             <Route exact path="/exercise/band">
-              <Exercises />
+              <Band />
             </Route>
           </div>
           <Contact />

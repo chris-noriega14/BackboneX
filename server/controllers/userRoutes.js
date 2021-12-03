@@ -72,9 +72,11 @@ router.post('/register', async (req, res) => {
           password: password
         });
 
-        const token = signToken(newUsers)
-
-        return { token, newUsers };
+        const token = signToken(newUsers);
+        console.log("test")
+        console.log(token)
+        res.json({token, newUsers });
+     
 
       
       }

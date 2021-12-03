@@ -1,12 +1,33 @@
 import './Hero.css';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Button, Modal } from 'react-bootstrap';
+import registerApi from '../../utils/httpRoutesReg';
+import auth from "../../utils/auth"
 
 
 function Signup() {
+  const emailInput = useRef()
+  const password1Input = useRef()
+  const password2Input = useRef()
+  const first_nameInput = useRef()
+  const last_nameInput = useRef()
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  const handleClose = () => {
+    setShow(false)
+
+    registerApi.register(
+      first_nameInput.current.value,
+      last_nameInput.current.value,
+      emailInput.current.value,
+      password1Input.current.value,
+      password2Input.current.value,
+      )
+      .then((res) => {
+        console.log(res)
+      auth.login(res.data.token);
+    })
+  }
   const handleShow = () => setShow(true);
 
   return (
@@ -24,6 +45,7 @@ function Signup() {
             <div className="form-group">
               <label htmlFor="first_name">First Name</label>
               <input
+              ref={first_nameInput}
                 type="text"
                 id="first_name"
                 name="first_name"
@@ -34,6 +56,7 @@ function Signup() {
             <div className="form-group">
               <label htmlFor="last_name">Last Name</label>
               <input
+              ref={last_nameInput}
                 type="text"
                 id="last_name"
                 name="last_name"
@@ -44,6 +67,7 @@ function Signup() {
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
+              ref={emailInput}
                 type="email"
                 id="email"
                 name="email"
@@ -54,6 +78,7 @@ function Signup() {
             <div className="form-group">
               <label htmlFor="password">Password</label>
               <input
+              ref={password1Input}
                 type="password"
                 id="password"
                 name="password"
@@ -64,6 +89,7 @@ function Signup() {
             <div className="form-group">
               <label htmlFor="password">Confirm Password</label>
               <input
+              ref={password2Input}
                 type="password"
                 id="password2"
                 name="password2"

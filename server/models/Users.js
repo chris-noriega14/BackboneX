@@ -10,7 +10,7 @@ class Users extends Model {
 
 Users.init(
     {
-        id : {
+        id: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true,

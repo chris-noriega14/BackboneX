@@ -35,3 +35,12 @@ query getStretchExercises {
   }
 }
 `;
+
+export const USER_EXERCISES= gql`
+query getUserExercises ($loginEmail: String!) {
+  userExercises (type: $loginEmail) {
+    exerciseId
+    loginEmail
+  }
+}
+`;

@@ -9,19 +9,16 @@ type Exercise {
   imgEnd:String
 }
 
-type Users {
-  id: ID
-  firstName: String
-  lastName: String
-  email: String
-  password: String
+type UserExercise {
+  exerciseId: ID
+  loginEmail: String
 }
 
 type Query {
     exercises (type: String): [Exercise]
     bandExercises (type: String): [Exercise]
     stretchExercises (type: String): [Exercise]
-    users (id: Int): [Users]
+    userExercises (type: String): [UserExercise]
   }
 `;
 

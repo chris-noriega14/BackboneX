@@ -1,4 +1,4 @@
-const { Exercise, Users } = require('../models');
+const { Exercise, UserExercise } = require('../models');
 
 const resolvers = {
   Query: {
@@ -11,8 +11,8 @@ const resolvers = {
     stretchExercises: async (parent, args) => {
       return await Exercise.find({ exerciseType: args.type });
     },
-    users: async (parent, args) => {
-      return await Users.findOne({_id: args.id});
+    userExercises: async (parent, args) => {
+      return await UserExercise.find({ loginEmail: args.type});
     },
   },
 };

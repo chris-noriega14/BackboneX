@@ -37,13 +37,10 @@ query getStretchExercises {
 `;
 
 export const USER_EXERCISES= gql`
-query getUsers {
-  users (id: 1) {
-    id
-    firstName
-    lastName
-    email
-    password
+query getUserExercises ($loginEmail: String!) {
+  userExercises (type: $loginEmail) {
+    exerciseId
+    loginEmail
   }
 }
 `;

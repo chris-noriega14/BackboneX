@@ -35,3 +35,15 @@ query getStretchExercises {
   }
 }
 `;
+
+export const USER_EXERCISES= gql`
+query getUsers {
+  users (id: 1) {
+    id
+    firstName
+    lastName
+    email
+    password
+  }
+}
+`;

@@ -22,6 +22,14 @@ type Query {
     stretchExercises (type: String): [Exercise]
     userExercises (type: String): [UserExercise]
   }
+
+  type Mutation {
+    
+    addExercise
+
+    deleteExercise
+  }
+
 `;
 
 module.exports = typeDefs;

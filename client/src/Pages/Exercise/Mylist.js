@@ -1,4 +1,5 @@
 import './Exercises.css';
+import Button from '@mui/material/Button';
 
 function Mylist() {
   return (
@@ -10,7 +11,9 @@ function Mylist() {
           <h1>My Exercise List</h1>
           
      {/* Card */}
-
+<div>
+<Button variant="contained">Delete</Button>
+  </div>
         </div>
 
       </div>

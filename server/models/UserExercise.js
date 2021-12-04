@@ -13,6 +13,12 @@ const userExerciseSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  exercise: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: 'Exercise',
+    },
+  ],
 });
 
 const UserExercise = model('userExercise', userExerciseSchema);

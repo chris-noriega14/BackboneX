@@ -7,11 +7,13 @@ type Exercise {
   exercisePath: String
   imgStart: String
   imgEnd:String
+  exerciseType: String
 }
 
 type UserExercise {
-  exerciseId: ID
+  exerciseId: ID 
   loginEmail: String
+  exercise: [Exercise]
 }
 
 type Query {

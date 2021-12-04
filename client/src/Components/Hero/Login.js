@@ -22,7 +22,9 @@ function Login() {
     setShow(false)
 
     loginApi.login(emailInput.current.value, passwordInput.current.value).then((res) => {
-      auth.login(res.data.token);
+      console.log("hey")
+      console.log(res.data.UsersData.email);
+      auth.login(res.data.token,res.data.UsersData.email);
     })
   }
   const handleShow = () => setShow(true);

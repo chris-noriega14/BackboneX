@@ -9,7 +9,8 @@ function Mylist() {
     variables: { loginEmail: loginEmail },
   });
   console.log(data);
-  const exercises = data?.exercises || [];
+  const exercises = data?.userExercises[0].exercises || [];
+  console.log(exercises)
   return (
     <div>
     <section id="exercises" className="exercises">
@@ -22,7 +23,7 @@ function Mylist() {
     
           {exercises &&
             exercises.map((exercise) => (
-              <div key={exercise._id} className="card mb-3">
+              <div key={exercises.loginEmail} className="card mb-3">
                 <h4 className="card-header bg-primary text-light p-2 m-0">
                   {exercise.exerciseName} <br />
                   <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgStart}`}/>

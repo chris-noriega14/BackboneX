@@ -28,10 +28,10 @@ const Band = () => {
         {exercise.exerciseName} </h4>
         <br />
         <div className="card-body bg-light p-2">
-        <img src={`/images/exercises/band/${exercise.exercisePath}/${exercise.imgStart}`}/>
+        <img src={`/images/exercises/band/${exercise.exercisePath}/${exercise.imgStart}`} width="40%" height="40%"/>
       </div>
       <div className="card-body bg-light p-2">
-      <img src={`/images/exercises/band/${exercise.exercisePath}/${exercise.imgEnd}`}/>
+      <img src={`/images/exercises/band/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
       </div>
       <div>
              <Button variant="contained">Add to List</Button>

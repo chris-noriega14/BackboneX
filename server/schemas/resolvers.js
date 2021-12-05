@@ -25,7 +25,18 @@ const resolvers = {
         },
         {
           new: true
-        }
+        },
+      );
+    },
+    removeExercise: async (parent, { email, exerciseObjId }) => {
+      return UserExercise.findOneAndUpdate(
+        { loginEmail: email },
+        {
+          $pull: { exercises: exerciseObjId },
+        },
+        {
+          new: true
+        },
       );
     }
   }

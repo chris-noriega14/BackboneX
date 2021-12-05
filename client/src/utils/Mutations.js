@@ -7,3 +7,10 @@ export const ADD_EXERCISE = gql`
     }
   }
 `;
+export const REMOVE_EXERCISE = gql`
+  mutation removeExercise($exerciseObjId: ID!, $email: String!) {
+    removeExercise(email: $email, exerciseObjId: $exerciseObjId) {
+      _id
+    }
+  }
+`;

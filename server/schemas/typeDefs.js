@@ -11,7 +11,7 @@ type Exercise {
 }
 
 type UserExercise {
-  exerciseId: ID 
+  _id: ID
   loginEmail: String
   exercise: [Exercise]
 }

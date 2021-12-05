@@ -12,11 +12,8 @@ const resolvers = {
       return await Exercise.find({ exerciseType: args.type });
     },
     userExercises: async (parent, args) => {
-      return await UserExercise.find({ loginEmail: args.type}).populate('exercises');
+      return await UserExercise.find({ loginEmail: args.type }).populate('exercises');
     },
-    // userExercises: async (parent, args) => {
-    //   return UserExercise.findOne({ loginEmail: args.type }).populate('exercises');
-    // },
   },
 };
 

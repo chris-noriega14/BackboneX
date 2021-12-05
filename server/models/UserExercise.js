@@ -1,24 +1,20 @@
 const { Schema, model } = require('mongoose');
 
 const userExerciseSchema = new Schema({
-  exerciseId: {
-    type: Number,
-    required: true,
-  },
   loginEmail: {
     type: String,
     required: true,
   },
+  exercises: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Exercise"
+    }
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
   },
-  exercise: [
-    {
-      type: Schema.Types.ObjectId,
-      ref: 'Exercise',
-    },
-  ],
 });
 
 const UserExercise = model('userExercise', userExerciseSchema);

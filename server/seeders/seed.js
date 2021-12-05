@@ -1,11 +1,7 @@
-// const db = require('../config/connection');
 const { Exercise, UserExercise } = require('../models');
-const users = require('../models/Users');
-const exerciseSeeds = require('./exerciseSeeds.json');
-const userSeeds = require('./usersSeeds.js');
 const userExerciseSeeds = require('./userExerciseSeeds.json');
+const exerciseSeeds = require('./exerciseSeeds.json');
 const mongoose = require('mongoose');
-const sequelize = require('../config/connection')
 
 mongoose.connect(
   process.env.MONGODB_URI || 'mongodb://localhost/exercise',
@@ -20,21 +16,28 @@ mongoose.connect(
 const db = mongoose.connection;
 
 db.once('open', async () => {
-  await Exercise.deleteMany({});
-  await Exercise.create(exerciseSeeds);
-  await UserExercise.deleteMany({});
-  await UserExercise.create(userExerciseSeeds);
+  try {
+    await Exercise.deleteMany({});
+    await UserExercise.deleteMany({});
 
-  console.log('=======Seeds planted!=======');
-  // process.exit(0);
-});
+    await UserExercise.create(userExerciseSeeds);
 
-const seedAll = async () => {
-  await sequelize.sync({force: false});
-  await userSeeds();
-  console.log('<-- all seeds planted-->');
+    for (let i = 0; i < exerciseSeeds.length; i++) {
+      const { _id, loginEmail } = await Exercise.create(exerciseSeeds[i]);
+      const userExercise = await UserExercise.findOneAndUpdate(
+        { loginEmail: loginEmail },
+        {
+          $addToSet: {
+            exercises: _id,
+          },
+        }
+      );
+    }
+  } catch (err) {
+    console.error(err);
+    process.exit(1);
+  }
 
+  console.log('all done!');
   process.exit(0);
-};
-
-seedAll();
+});

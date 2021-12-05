@@ -1,5 +1,6 @@
 [
   {
+    "exerciseAuthor": "kevinTupik@gmail.com",
     "exerciseName": "Superman",
     "exercisePath": "superman",
     "imgStart": "resized_480x360_super_start.jpg",
@@ -9,6 +10,7 @@
     "endingTip": "abc"
  },
  {
+    "exerciseAuthor": "tomsmith25@gmail.com",
     "exerciseName": "Wall Squat",
     "exercisePath": "wall_squat",
     "imgStart": "squat_start_1.png",
@@ -18,6 +20,7 @@
     "endingTip": "def"
   },
  {
+    "exerciseAuthor": "tomsmith25@gmail.com",
     "exerciseName": "Opposite Arm-Leg",
     "exercisePath": "opposite_arm-leg",
     "imgStart": "resized_480x360_opp_arm_start.jpg",

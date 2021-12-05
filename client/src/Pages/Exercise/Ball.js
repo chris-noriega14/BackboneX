@@ -24,11 +24,13 @@ const Ball = () => {
         exercises.map((exercise) => (
           <div key={exercise._id} className="card mb-3">
             <h4 className="card-header bg-primary text-light p-2 m-0">
-              {exercise.exerciseName} <br />
-              <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgStart}`}/>
-            </h4>
+              {exercise.exerciseName} </h4>
+              <br />
+              <div className="card-body bg-light p-2">
+              <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgStart}`} width="40%" height="40%"/>
+            </div>
             <div className="card-body bg-light p-2">
-            <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgEnd}`}/>
+            <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
             </div>
             <div>
              <Button variant="contained">Add to List</Button>

@@ -13,7 +13,7 @@ type Exercise {
 type UserExercise {
   _id: ID
   loginEmail: String
-  exercise: [Exercise]
+  exercises: [Exercise]
 }
 
 type Query {

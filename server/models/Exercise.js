@@ -29,7 +29,7 @@ const exerciseSchema = new Schema({
     type: String,
     required: true,
   },
-  diagnosis: {
+  exerciseAuthor: {
     type: String,
   },
   createdAt: {

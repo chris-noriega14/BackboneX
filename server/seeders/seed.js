@@ -23,9 +23,9 @@ db.once('open', async () => {
     await UserExercise.create(userExerciseSeeds);
 
     for (let i = 0; i < exerciseSeeds.length; i++) {
-      const { _id, loginEmail } = await Exercise.create(exerciseSeeds[i]);
+      const { _id, exerciseAuthor } = await Exercise.create(exerciseSeeds[i]);
       const userExercise = await UserExercise.findOneAndUpdate(
-        { loginEmail: loginEmail },
+        { loginEmail: exerciseAuthor },
         {
           $addToSet: {
             exercises: _id,

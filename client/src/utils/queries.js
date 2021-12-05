@@ -40,7 +40,7 @@ export const USER_EXERCISES= gql`
 query getUserExercises ($loginEmail: String!) {
   userExercises (type: $loginEmail) {
     loginEmail
-    exercise {
+    exercises {
       exerciseName
       exercisePath
       imgStart

@@ -25,14 +25,16 @@ function Mylist() {
             exercises.map((exercise) => (
               <div key={exercises.loginEmail} className="card mb-3">
                 <h4 className="card-header bg-primary text-light p-2 m-0">
-                  {exercise.exerciseName} <br />
+                  {exercise.exerciseName}  </h4>
+                   <br />         
+                   <div className="card-body bg-light p-2">         
                   <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgStart}`}/>
-                </h4>
+                  </div>
                 <div className="card-body bg-light p-2">
                 <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`}/>
                 </div>
                 <div>
-                 <Button variant="contained">Add to List</Button>
+                 <Button variant="contained">Delete</Button>
                    </div>
                        </div>
                  

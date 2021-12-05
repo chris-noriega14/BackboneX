@@ -22,7 +22,13 @@ type Query {
     stretchExercises (type: String): [Exercise]
     userExercises (type: String): [UserExercise]
   }
+type Mutation {
+  addExercise(email: String!, exerciseObjId: ID! ): UserExercise
+
+
+}
 `;
+
 
 module.exports = typeDefs;
 

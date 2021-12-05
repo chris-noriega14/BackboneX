@@ -14,7 +14,21 @@ const resolvers = {
     userExercises: async (parent, args) => {
       return await UserExercise.find({ loginEmail: args.type }).populate('exercises');
     },
+    
   },
+  Mutation: {
+    addExercise: async (parent, { email, exerciseObjId }) => {
+      return UserExercise.findOneAndUpdate(
+        { loginEmail: email },
+        {
+          $addToSet: { exercises: exerciseObjId },
+        },
+        {
+          new: true
+        }
+      );
+    }
+  }
 };
 
 module.exports = resolvers;

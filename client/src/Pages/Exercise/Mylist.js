@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import { useQuery, useMutation } from '@apollo/client';
 import { USER_EXERCISES } from '../../utils/queries';
 import { REMOVE_EXERCISE } from '../../utils/Mutations';
+import Auth from '../../utils/auth.js';
 
 function Mylist() {
   const loginEmail = localStorage.getItem('email');
@@ -33,6 +34,7 @@ console.log(exercises);
 
   return (
     <div>
+      {Auth.loggedIn() ? ( 
     <section id="exercises" className="exercises">
           <div className="container">
     
@@ -67,6 +69,9 @@ console.log(exercises);
     
           </div>
         </section>
+        ) : (<div>
+          <h1>Please login to view exercises!</h1>
+          </div>)}
         </div>
       );
     }

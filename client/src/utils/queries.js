@@ -41,6 +41,7 @@ query getUserExercises ($loginEmail: String!) {
   userExercises (type: $loginEmail) {
     loginEmail
     exercises {
+      _id
       exerciseName
       exercisePath
       imgStart

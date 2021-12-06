@@ -18,6 +18,9 @@ import Nav from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Contact from './Components/Contact/Contact'
 import Category from './Pages/Exercise/Category';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
@@ -43,35 +46,40 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const notify = () => toast("Wow so easy!");
   return (
+   
     <ApolloProvider client={client}>
+   
       <Router>
+     
         <div className="flex-column justify-flex-start min-100-vh">
           <Nav />
           {/* <div className="container"> */}
-            <Route exact path="/">
-              <Hero />
-            </Route>
-            <Route exact path="/exercises">
-              <Category />
-            </Route>
-            <Route exact path="/mylist">
-              <Mylist />
-            </Route>
-            <Route exact path="/exercise/ball">
-              <Ball />
-            </Route>
-            <Route exact path="/exercise/stretch">
-              <Stretch />
-            </Route>
-            <Route exact path="/exercise/band">
-              <Band />
-            </Route>
+          <Route exact path="/">
+            <Hero />
+          </Route>
+          <Route exact path="/exercises">
+            <Category />
+          </Route>
+          <Route exact path="/mylist">
+            <Mylist />
+          </Route>
+          <Route exact path="/exercise/ball">
+            <Ball />
+          </Route>
+          <Route exact path="/exercise/stretch">
+            <Stretch />
+          </Route>
+          <Route exact path="/exercise/band">
+            <Band />
+          </Route>
           {/* </div> */}
           <Contact />
         </div>
       </Router>
     </ApolloProvider>
+  
   );
 }
 

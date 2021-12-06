@@ -6,9 +6,42 @@ https://blooming-springs-01456.herokuapp.com/
 
 # Members
 
-* Christopher Noriega
-* Faizila Amlani
-* John Coakley
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Faizila">
+        <img
+          alt="Faizila"
+          src="https://avatars.githubusercontent.com/u/78191579?v=4"
+          width="117"
+        />
+        <br />
+        Faizila
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/chris-noriega14">
+        <img
+          alt="Chris"
+          src="https://avatars.githubusercontent.com/u/90105704?v=4"
+          width="117"
+        />
+        <br />
+       Chris
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/ESThing64">
+        <img
+          alt="ESThing"
+          src="https://avatars.githubusercontent.com/u/89550738?v=4"
+          width="117"
+        />
+        <br />
+        John Coakley
+      </a>
+    </td>
+</table>
 
 # Powerpoint Presentation Link
 

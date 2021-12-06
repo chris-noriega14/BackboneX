@@ -16,15 +16,14 @@ router.post('/login', async (req, res) => {
     if (!validatePassword) {
       console.log("password wrong");
       error_type = { error: "Your password or email is not correct." }
-    }
+    } else {
 
-   
-      
       const token = signToken(UsersData);
       console.log("test")
       console.log(token)
       res.json({token, UsersData});
-   
+    }
+      
 
 
 

@@ -5,6 +5,7 @@ import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_BAND } from '../../utils/queries';
 import Button from '@mui/material/Button';
 import { ADD_EXERCISE } from '../../utils/Mutations';
+import Auth from '../../utils/auth.js';
 
 const Band = () => {
   const { loading, data } = useQuery(QUERY_BAND);
@@ -32,6 +33,7 @@ const Band = () => {
 
   return (
       <div>
+        {Auth.loggedIn() ? ( 
 <section id="exercises" className="exercises">
       <div className="container">
 
@@ -65,6 +67,9 @@ const Band = () => {
 
       </div>
     </section>
+    ) : (<div>
+      <h1>Please login to view exercises!</h1>
+      </div>)}
     </div>
   );
 }

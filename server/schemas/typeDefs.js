@@ -25,6 +25,7 @@ type Query {
 type Mutation {
   addExercise(email: String!, exerciseObjId: ID! ): UserExercise
   removeExercise(email: String!, exerciseObjId: ID! ): UserExercise
+  initNewUser(email: String!): UserExercise
 
 }
 `;

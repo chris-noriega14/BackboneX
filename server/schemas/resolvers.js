@@ -28,6 +28,13 @@ const resolvers = {
         },
       );
     },
+    initNewUser: async (parent, { email }) => {
+      const loginEmail = UserExercise.create({
+        loginEmail: email
+      });
+      console.log(loginEmail);
+        return {loginEmail}
+    },
     removeExercise: async (parent, { email, exerciseObjId }) => {
       return UserExercise.findOneAndUpdate(
         { loginEmail: email },

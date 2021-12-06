@@ -8,6 +8,7 @@ import { ADD_EXERCISE } from '../../utils/Mutations';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 
+import Auth from '../../utils/auth.js';
 
 const Band = () => {
   const notify = () => toast("Exercise Added!");
@@ -37,6 +38,7 @@ const Band = () => {
   return (
       <div>
          <ToastContainer />
+        {Auth.loggedIn() ? ( 
 <section id="exercises" className="exercises">
       <div className="container">
 
@@ -70,6 +72,9 @@ const Band = () => {
 
       </div>
     </section>
+    ) : (<div>
+      <h1>Please login to view exercises!</h1>
+      </div>)}
     </div>
   );
 }

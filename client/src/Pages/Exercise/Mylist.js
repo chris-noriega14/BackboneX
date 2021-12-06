@@ -5,6 +5,7 @@ import { USER_EXERCISES } from '../../utils/queries';
 import { REMOVE_EXERCISE } from '../../utils/Mutations';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Auth from '../../utils/auth.js';
 
 function Mylist() {
   const notify = () => toast("Exercise Deleted!");
@@ -37,6 +38,7 @@ console.log(exercises);
   return (
     <div>
       <ToastContainer />
+      {Auth.loggedIn() ? ( 
     <section id="exercises" className="exercises">
           <div className="container">
     
@@ -71,6 +73,9 @@ console.log(exercises);
     
           </div>
         </section>
+        ) : (<div>
+          <h1>Please login to view exercises!</h1>
+          </div>)}
         </div>
       );
     }

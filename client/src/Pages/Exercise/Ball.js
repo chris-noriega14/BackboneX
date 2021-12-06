@@ -1,15 +1,36 @@
 import './Exercises.css';
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_BALL } from '../../utils/queries';
+import { ADD_EXERCISE } from '../../utils/Mutations';
 import Button from '@mui/material/Button';
 
 const Ball = () => {
+  const [addEx, setAddEx] = useState('')
   const { loading, data } = useQuery(QUERY_BALL);
   console.log(data);
   const exercises = data?.exercises || [];
+  const [addExercise, { error }] = useMutation(ADD_EXERCISE);
 
+ const handleClick = async (data, e) => {
+  console.log(e.target);
+  let exerciseObjId = e.target.value
+  console.log(exerciseObjId);
+  let email = localStorage.getItem('email');
+  console.log(email);
+
+  try {
+    const addData = await addExercise({
+      variables:{ email, exerciseObjId },
+    })
+  } catch (err) {
+    console.error(err)
+  }
+
+    console.log(e.target.value, data);
+}
+ 
   return (
       <div>
 <section id="exercises" className="exercises">
@@ -33,7 +54,7 @@ const Ball = () => {
             <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
             </div>
             <div>
-             <Button variant="contained">Add to List</Button>
+             <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Add to List</Button>
                </div>
                    </div>
              

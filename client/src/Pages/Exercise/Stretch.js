@@ -5,8 +5,12 @@ import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STRETCH } from '../../utils/queries';
 import Button from '@mui/material/Button';
 import { ADD_EXERCISE } from '../../utils/Mutations';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const Stretch = () => {
+  const notify = () => toast("Exercise Added!");
   const { loading, data } = useQuery(QUERY_STRETCH);
   console.log(data);
   const exercises = data?.stretchExercises || [];
@@ -25,12 +29,14 @@ const Stretch = () => {
     } catch (err) {
       console.error(err)
     }
+    notify()
   
       console.log(e.target.value, data);
   }
 
   return (
       <div>
+         <ToastContainer />
 <section id="exercises" className="exercises">
       <div className="container">
 

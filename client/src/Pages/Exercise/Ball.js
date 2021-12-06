@@ -5,8 +5,15 @@ import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_BALL } from '../../utils/queries';
 import { ADD_EXERCISE } from '../../utils/Mutations';
 import Button from '@mui/material/Button';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
+
+
 
 const Ball = () => {
+  const notify = () => toast("Exercise Added!");
+
+
   const { loading, data } = useQuery(QUERY_BALL);
   console.log(data);
   const exercises = data?.exercises || [];
@@ -23,15 +30,19 @@ const Ball = () => {
     const addData = await addExercise({
       variables:{ email, exerciseObjId },
     })
+
   } catch (err) {
     console.error(err)
   }
+  notify()
 
     console.log(e.target.value, data);
 }
  
   return (
       <div>
+      <ToastContainer />
+
 <section id="exercises" className="exercises">
       <div className="container">
 

@@ -3,8 +3,11 @@ import Button from '@mui/material/Button';
 import { useQuery, useMutation } from '@apollo/client';
 import { USER_EXERCISES } from '../../utils/queries';
 import { REMOVE_EXERCISE } from '../../utils/Mutations';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css'
 
 function Mylist() {
+  const notify = () => toast("Exercise Deleted!");
   const loginEmail = localStorage.getItem('email');
   const { loading, data } = useQuery(USER_EXERCISES,{
     variables: { loginEmail: loginEmail },
@@ -27,12 +30,13 @@ console.log(exercises);
   } catch (err) {
     console.error(err)
   }
-
+  notify()
     console.log(e.target.value, data);
 }
 
   return (
     <div>
+      <ToastContainer />
     <section id="exercises" className="exercises">
           <div className="container">
     

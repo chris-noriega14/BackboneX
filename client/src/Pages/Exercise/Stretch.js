@@ -5,6 +5,7 @@ import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STRETCH } from '../../utils/queries';
 import Button from '@mui/material/Button';
 import { ADD_EXERCISE } from '../../utils/Mutations';
+import Auth from '../../utils/auth.js';
 
 const Stretch = () => {
   const { loading, data } = useQuery(QUERY_STRETCH);
@@ -31,6 +32,7 @@ const Stretch = () => {
 
   return (
       <div>
+        {Auth.loggedIn() ? ( 
 <section id="exercises" className="exercises">
       <div className="container">
 
@@ -63,6 +65,9 @@ const Stretch = () => {
 
       </div>
     </section>
+    ) : (<div>
+      <h1>Please login to view exercises!</h1>
+      </div>)}
     </div>
   );
 }

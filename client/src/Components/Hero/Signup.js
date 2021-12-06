@@ -3,6 +3,8 @@ import React, { useState, useRef } from 'react';
 import { Button, Modal } from 'react-bootstrap';
 import registerApi from '../../utils/httpRoutesReg';
 import auth from "../../utils/auth"
+import { useMutation } from '@apollo/client';
+import { INIT_USER } from '../../utils/Mutations';
 
 
 function Signup() {
@@ -12,6 +14,7 @@ function Signup() {
   const first_nameInput = useRef()
   const last_nameInput = useRef()
   const [show, setShow] = useState(false);
+  const [initNewUser, { error }] = useMutation(INIT_USER);
 
   const handleClose = () => {
     setShow(false)
@@ -23,9 +26,24 @@ function Signup() {
       password1Input.current.value,
       password2Input.current.value,
       )
-      .then((res) => {
+      .then( async (res) => {
         console.log(res)
-      auth.login(res.data.token);
+      auth.login(res.data.token, res.data.newUsers.email);
+      if (localStorage.getItem('id_token')) {
+        let email = localStorage.getItem('email');
+        console.log(email);
+        try {
+          const initNewUserData = await initNewUser({
+            variables:{ email },
+          })
+        } catch (err) {
+          console.error(err)
+        }
+
+
+
+        console.log("hey its working");
+      }
     })
   }
   const handleShow = () => setShow(true);

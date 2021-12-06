@@ -48,7 +48,6 @@ function App() {
       <Router>
         <div className="flex-column justify-flex-start min-100-vh">
           <Nav />
-          <div className="container">
             <Route exact path="/">
               <Hero />
             </Route>
@@ -67,7 +66,6 @@ function App() {
             <Route exact path="/exercise/band">
               <Band />
             </Route>
-          </div>
           <Contact />
         </div>
       </Router>

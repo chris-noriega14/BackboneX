@@ -118,8 +118,10 @@ npm start
 
 # Screenshots
 
-![QR_code](https://user-images.githubusercontent.com/78191579/140362169-9c5d5761-8125-4a24-b3c1-96b425f3b160.png)
-![footer](https://user-images.githubusercontent.com/78191579/140420579-46203950-d66c-4d7f-9777-df99b8c0924c.JPG)
+![homepage](https://user-images.githubusercontent.com/78191579/144900734-923956e4-83f1-4cda-8fc2-e3f8964c5bcb.JPG)
+![login](https://user-images.githubusercontent.com/78191579/144900747-2d8a1678-f389-4b99-8e8d-c787b9940966.JPG)
+![signup](https://user-images.githubusercontent.com/78191579/144900755-3279b30a-a1dd-4d04-b021-5e94d5b2a014.JPG)
+![footer](https://user-images.githubusercontent.com/78191579/144900759-e8e7a9b0-0097-48a8-896b-b8aac7dedc25.JPG)
 
 # Videos
 
@@ -127,9 +129,9 @@ npm start
 
 # Testing
 
-* Uses the [Insomnia](https://insomnia.rest/download) to test the code.
+* Uses the [GraphQL Playground](https://www.npmjs.com/package/graphql-playground) to test the code.
 
-![insomnia](https://user-images.githubusercontent.com/78191579/140422149-d23c1d6b-d23f-457d-b9ac-5e32cf38fc44.JPG)
+![Testing](https://user-images.githubusercontent.com/78191579/144905665-16d8c498-2d66-479c-817f-881306da9cae.PNG)
 
 # Questions
 

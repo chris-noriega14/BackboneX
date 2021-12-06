@@ -1,7 +1,8 @@
 import './Exercises.css';
 import Button from '@mui/material/Button';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { USER_EXERCISES } from '../../utils/queries';
+import { REMOVE_EXERCISE } from '../../utils/Mutations';
 
 function Mylist() {
   const loginEmail = localStorage.getItem('email');
@@ -10,7 +11,26 @@ function Mylist() {
   });
   console.log(data);
   const exercises = data?.userExercises[0].exercises || [];
-  console.log(exercises)
+  const [removeExercise, { error }] = useMutation(REMOVE_EXERCISE);
+console.log(exercises);
+ const handleClick = async (data, e) => {
+  console.log(e.target);
+  let exerciseObjId = e.target.value
+  console.log(exerciseObjId);
+  let email = localStorage.getItem('email');
+  console.log(email);
+
+  try {
+    const removeData = await removeExercise({
+      variables:{ email, exerciseObjId },
+    })
+  } catch (err) {
+    console.error(err)
+  }
+
+    console.log(e.target.value, data);
+}
+
   return (
     <div>
     <section id="exercises" className="exercises">
@@ -34,7 +54,7 @@ function Mylist() {
                 <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
                 </div>
                 <div>
-                 <Button variant="contained">Delete</Button>
+                <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Delete</Button>
                    </div>
                        </div>
                  

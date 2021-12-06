@@ -7,7 +7,6 @@ import { ADD_EXERCISE } from '../../utils/Mutations';
 import Button from '@mui/material/Button';
 
 const Ball = () => {
-  const [addEx, setAddEx] = useState('')
   const { loading, data } = useQuery(QUERY_BALL);
   console.log(data);
   const exercises = data?.exercises || [];

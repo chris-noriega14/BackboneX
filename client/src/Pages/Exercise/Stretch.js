@@ -1,14 +1,33 @@
 import './Exercises.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { useQuery } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_STRETCH } from '../../utils/queries';
 import Button from '@mui/material/Button';
+import { ADD_EXERCISE } from '../../utils/Mutations';
 
 const Stretch = () => {
   const { loading, data } = useQuery(QUERY_STRETCH);
   console.log(data);
   const exercises = data?.stretchExercises || [];
+  const [addExercise, { error }] = useMutation(ADD_EXERCISE);
+  const handleClick = async (data, e) => {
+    console.log(e.target);
+    let exerciseObjId = e.target.value
+    console.log(exerciseObjId);
+    let email = localStorage.getItem('email');
+    console.log(email);
+  
+    try {
+      const addData = await addExercise({
+        variables:{ email, exerciseObjId },
+      })
+    } catch (err) {
+      console.error(err)
+    }
+  
+      console.log(e.target.value, data);
+  }
 
   return (
       <div>
@@ -34,7 +53,7 @@ const Stretch = () => {
       <img src={`/images/exercises/stretches/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
       </div>
       <div>
-             <Button variant="contained">Add to List</Button>
+      <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Add to List</Button>
                </div>
     </div>
   ))}

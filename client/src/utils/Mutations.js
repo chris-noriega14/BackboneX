@@ -7,6 +7,15 @@ export const ADD_EXERCISE = gql`
     }
   }
 `;
+export const INIT_USER = gql`
+    mutation initNewUser($email: String!) {
+    initNewUser(email: $email) {
+        loginEmail
+      _id
+      }
+    }
+  
+`;
 export const REMOVE_EXERCISE = gql`
   mutation removeExercise($exerciseObjId: ID!, $email: String!) {
     removeExercise(email: $email, exerciseObjId: $exerciseObjId) {

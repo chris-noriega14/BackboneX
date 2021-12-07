@@ -45,7 +45,9 @@ https://blooming-springs-01456.herokuapp.com/
 
 # Powerpoint Presentation Link
 
-https://docs.google.com/presentation/d/1DUCBjjOIe4yf2fnxCC23JZO3H7Ldp44Q/edit?usp=sharing&ouid=110846898095699650282&rtpof=true&sd=true
+![qrcode](https://user-images.githubusercontent.com/78191579/144949528-dddb10bf-819e-4d40-ab6b-d149491459c3.png)
+
+https://docs.google.com/presentation/d/18SG-KX3haBCAK9oDiPkmBOyvwFX_so8O/edit?usp=sharing&ouid=110846898095699650282&rtpof=true&sd=true
 
 # Description
 
@@ -55,7 +57,7 @@ BackBoneX is a web application for chiropractors to help their clients manage th
 
 * User can sign up for an account or login if they already have an account to view all exercises.
 * User can only view a full list of different exercises only if they are logged in.
-* User can add exercises to their personalized “my exercise list” page.
+* User can add/delete exercises to their personalized “My List” page.
 
 # Table of Contents
 
@@ -64,7 +66,6 @@ BackBoneX is a web application for chiropractors to help their clients manage th
 * Installation
 * Usage
 * Screenshots
-* videos
 * Testing
 * Questions
 * References
@@ -74,78 +75,57 @@ BackBoneX is a web application for chiropractors to help their clients manage th
 * HTML
 * CSS
 * JavaScript
-* Bootstrap
+* React-Bootstrap
 * Node.js
 * Express.js
 * React
 * Mongo DB
 * GraphQL
 * Sequelize ORM
+* Mongoose
 * MySQL
+* NoSQL
 * Heroku
 * Insomnia
+* GraphQL Playground
 * Google Fonts
 * Popper.js
-* Font Awesome
+* react-toastify
+* MUI
+* JWT
 * Box Icons
 
 # Built With
 
+* [MUI](https://mui.com/)
+* [React](https://reactjs.org/)
+* [react-bootstrap](https://www.npmjs.com/package/react-bootstrap)
 * [MySQL2](https://www.npmjs.com/package/mysql2)
-* [Sequelize](https://www.npmjs.com/package/sequelize) 
-* [dotenv package](https://www.npmjs.com/package/dotenv)
-* [bcrypt package](https://www.npmjs.com/package/bcrypt)
+* [GraphQL](https://graphql.org/) 
 * [Express package](https://www.npmjs.com/package/express)
-* [express-handlebars](https://www.npmjs.com/package/express-handlebars)
-* [express-session](https://www.npmjs.com/package/express-session)  
-* [connect-session-sequelize](https://www.npmjs.com/package/connect-session-sequelize)
-* [popperjs](https://www.npmjs.com/package/@popperjs/core)
 
 # Installation
 
 Run the following commands for installation:
 
-```bash
-npm init
-```
+Install the dependencies
 
-```bash
-npm install --save mysql2
 ```
-
-```bash
-npm i sequelize
+npm i
 ```
+Ensure mySQL and MongoDB are installed and the server is running. For more details please visit: https://www.mysql.com/
 
-```bash
-npm install dotenv
+Seed the database.
+
 ```
-
-```bash
-npm install bcrypt
-```
-
-```bash
-npm install express
-```
-
-```bash
-npm install express-session
-```
-
-```bash
-npm install connect-session-sequelize
-```
-
-```bash
-npm i @popperjs/core
+npm run seed
 ```
 
 # Usage
 
 The application will be invoked by using the following command:
 
-```bash
+```
 npm start
 ```
 
@@ -156,13 +136,9 @@ npm start
 ![signup](https://user-images.githubusercontent.com/78191579/144900755-3279b30a-a1dd-4d04-b021-5e94d5b2a014.JPG)
 ![footer](https://user-images.githubusercontent.com/78191579/144900759-e8e7a9b0-0097-48a8-896b-b8aac7dedc25.JPG)
 
-# Videos
-
-
-
 # Testing
 
-* Uses the [GraphQL Playground](https://www.npmjs.com/package/graphql-playground) to test the code.
+* Uses the [Insomnia](https://insomnia.rest/) and [GraphQL Playground](https://www.npmjs.com/package/graphql-playground) for testing.
 
 ![Testing](https://user-images.githubusercontent.com/78191579/144905665-16d8c498-2d66-479c-817f-881306da9cae.PNG)
 

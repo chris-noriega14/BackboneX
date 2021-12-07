@@ -103,22 +103,36 @@ BackBoneX is a web application for chiropractors to help their clients manage th
 * [MySQL2](https://www.npmjs.com/package/mysql2)
 * [GraphQL](https://graphql.org/) 
 * [Express package](https://www.npmjs.com/package/express)
+* [MongoDB](https://www.mongodb.com/)
 
 # Installation
 
 Run the following commands for installation:
 
-Install the dependencies
+* Git Clone the repo in bash.
+
+* Install the dependencies.
 
 ```
 npm i
 ```
-Ensure mySQL and MongoDB are installed and the server is running. For more details please visit: https://www.mysql.com/
+* Change ".env.EXAMPLE" file name to ".env" and add username/password.
 
-Seed the database.
+DB_NAME=exercise
+DB_USER=MySQL username
+DB_PASSWORD=MySQL password
+
+* Ensure mySQL and MongoDB are installed and the server is running.
+
+* Seed the database.
 
 ```
 npm run seed
+```
+* Use the following command to run front and back-end servers together.
+
+```
+npm run develop
 ```
 
 # Usage

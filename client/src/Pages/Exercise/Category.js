@@ -1,6 +1,7 @@
 import './Exercises.css';
 import { BiBasketball, BiHourglass, BiDotsHorizontal, BiCommand } from "react-icons/bi";
 import Auth from '../../utils/auth.js';
+import { Redirect } from "react-router-dom";
 
 function Category() {
   return (
@@ -69,9 +70,7 @@ function Category() {
 
       </div>
     </section>
-    ) : (<div>
-      <h1>Please login to view exercises!</h1>
-      </div>)}
+    ) : (<Redirect to="/" />)}
     </div>
   );
 }

@@ -7,6 +7,7 @@ import Button from '@mui/material/Button';
 import { ADD_EXERCISE } from '../../utils/Mutations';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import { Redirect } from "react-router-dom";
 
 import Auth from '../../utils/auth.js';
 
@@ -72,9 +73,7 @@ const Band = () => {
 
       </div>
     </section>
-    ) : (<div>
-      <h1>Please login to view exercises!</h1>
-      </div>)}
+    ) : (<Redirect to="/" />)}
     </div>
   );
 }

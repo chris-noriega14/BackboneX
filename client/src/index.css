@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.blank-exercises{
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  padding-top: 24vh;
+}

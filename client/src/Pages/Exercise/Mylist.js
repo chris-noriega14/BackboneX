@@ -7,78 +7,73 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import Auth from '../../utils/auth.js';
 import { Redirect } from "react-router-dom";
+import { useEffect, useState } from "react"
+import Card from '../../Components/shared/Card';
 
 function Mylist() {
+  const [exerciseData, setExerciseData] = useState()
   const notify = () => toast("Exercise Deleted!");
   const loginEmail = localStorage.getItem('email');
-  const { loading, data } = useQuery(USER_EXERCISES,{
-    variables: { loginEmail: loginEmail },
-  });
-  console.log(data);
-  const exercises = data?.userExercises[0].exercises || [];
   const [removeExercise, { error }] = useMutation(REMOVE_EXERCISE);
-console.log(exercises);
- const handleClick = async (data, e) => {
-  console.log(e.target);
-  let exerciseObjId = e.target.value
-  console.log(exerciseObjId);
-  let email = localStorage.getItem('email');
-  console.log(email);
+  const { loading, data, refetch } = useQuery(USER_EXERCISES, {
+    variables: { loginEmail: loginEmail },
+   
+  });
 
-  try {
-    const removeData = await removeExercise({
-      variables:{ email, exerciseObjId },
-    })
-  } catch (err) {
-    console.error(err)
+;
+  const handleClick = async (btnData, e) => {
+    console.log(e.target);
+    let exerciseObjId = e.target.value
+    let email = localStorage.getItem('email');
+    try {
+     const removeData = await removeExercise({
+        variables: { email, exerciseObjId },
+      })
+    } catch (err) {
+      console.log(err);
+    }
+    refetch()
+    notify()
   }
-  notify()
-    console.log(e.target.value, data);
-}
+
+  useEffect(() => {
+
+    if (!loading && data) {
+      setExerciseData(data.userExercises[0].exercises)
+      console.log(data.userExercises[0].exercises);
+    }
+
+  }, [loading,data])
 
   return (
     <div>
       <ToastContainer />
-      {Auth.loggedIn() ? ( 
-    <section id="exercises" className="exercises">
+      {Auth.loggedIn() ? (
+        <section id="exercises" className="exercises">
           <div className="container">
-    
+
             <div className="section-title">
-            <h1>My Exercises</h1>
-         {/* Card */}
-         <div>
-    
-          {exercises &&
-            exercises.map((exercise) => (
-              <div key={exercises.loginEmail} className="card mb-3">
-                <h4 className="card-header bg-primary text-light p-2 m-0">
-                  {exercise.exerciseName}  </h4>
-                   <br />         
-                   <div className="card-body bg-light p-2">         
-                  <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgStart}`} width="40%" height="40%"/>
-                  </div>
-                <div className="card-body bg-light p-2">
-                <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
-                </div>
-                <div>
-                <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Delete</Button>
-                   </div>
-                       </div>
-                 
-              
-            ))}
-          
-        </div>
-        {/* End Card */}
+              <h1>My Exercises</h1>
+              {/* Card */}
+
+              {exerciseData &&
+                  exerciseData?.map((exercise) => (
+
+                    <Card handleClick={handleClick} exerciseData={exerciseData} exercise={exercise} />
+                  ))}
+           
+
+
+              {/* End Card */}
             </div>
-    
+
           </div>
         </section>
-        ) : (<Redirect to="/" />)}
-        </div>
-      );
-    }
-    
-  
+      ) : (<Redirect to="/" />)}
+    </div>
+  );
+}
+
+
 
 export default Mylist;

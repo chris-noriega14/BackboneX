@@ -8,6 +8,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Auth from '../../utils/auth.js';
 import { Redirect } from "react-router-dom";
 import { useEffect, useState } from "react"
+import Card from '../../Components/shared/Card';
 
 function Mylist() {
   const [exerciseData, setExerciseData] = useState()
@@ -20,7 +21,7 @@ function Mylist() {
   });
 
 ;
-  const handleClick = async (data, e) => {
+  const handleClick = async (btnData, e) => {
     console.log(e.target);
     let exerciseObjId = e.target.value
     let email = localStorage.getItem('email');
@@ -54,29 +55,15 @@ function Mylist() {
             <div className="section-title">
               <h1>My Exercises</h1>
               {/* Card */}
-              <div>
 
-                {exerciseData &&
+              {exerciseData &&
                   exerciseData?.map((exercise) => (
-                    <div key={exerciseData.loginEmail} className="card mb-3">
-                      <h4 className="card-header bg-primary text-light p-2 m-0">
-                        {exercise.exerciseName}  </h4>
-                      <br />
-                      <div className="card-body bg-light p-2">
-                        <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgStart}`} width="40%" height="40%" />
-                      </div>
-                      <div className="card-body bg-light p-2">
-                        <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%" />
-                      </div>
-                      <div>
-                        <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Delete</Button>
-                      </div>
-                    </div>
 
-
+                    <Card handleClick={handleClick} exerciseData={exerciseData} exercise={exercise} />
                   ))}
+           
 
-              </div>
+
               {/* End Card */}
             </div>
 

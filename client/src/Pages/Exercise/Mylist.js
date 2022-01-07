@@ -17,7 +17,6 @@ function Mylist() {
   const [removeExercise, { error }] = useMutation(REMOVE_EXERCISE);
   const { loading, data, refetch } = useQuery(USER_EXERCISES, {
     variables: { loginEmail: loginEmail },
-   
   });
 
 ;
@@ -45,6 +44,9 @@ function Mylist() {
 
   }, [loading,data])
 
+  if(!exerciseData || exerciseData.length === 0) {
+    return <h1 className='blank-exercises'>You Haven't Added any Exercises Yet!</h1>
+}
   return (
     <div>
       <ToastContainer />
@@ -54,17 +56,10 @@ function Mylist() {
 
             <div className="section-title">
               <h1>My Exercises</h1>
-              {/* Card */}
-
               {exerciseData &&
                   exerciseData?.map((exercise) => (
-
                     <Card handleClick={handleClick} exerciseData={exerciseData} exercise={exercise} />
                   ))}
-           
-
-
-              {/* End Card */}
             </div>
 
           </div>
@@ -73,7 +68,6 @@ function Mylist() {
     </div>
   );
 }
-
 
 
 export default Mylist;

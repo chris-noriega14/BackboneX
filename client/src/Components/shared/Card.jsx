@@ -7,8 +7,6 @@ function Card({exerciseData, exercise, handleClick,btnData}) {
 
     return (
                 <div>
-
-           
                     <div key={exerciseData.loginEmail} className="card mb-3">
                       <h4 className="card-header bg-primary text-light p-2 m-0">
                         {exercise.exerciseName}  </h4>

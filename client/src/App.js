@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -46,6 +46,10 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [modifyKo, setModifyKo] = useState(false)
+
+
+  
   const notify = () => toast("Wow so easy!");
   return (
    
@@ -63,16 +67,16 @@ function App() {
             <Category />
           </Route>
           <Route exact path="/mylist">
-            <Mylist />
+            <Mylist   />
           </Route>
           <Route exact path="/exercise/ball">
-            <Ball />
+            <Ball    />
           </Route>
           <Route exact path="/exercise/stretch">
-            <Stretch />
+            <Stretch   />
           </Route>
           <Route exact path="/exercise/band">
-            <Band />
+            <Band   />
           </Route>
           {/* </div> */}
           <Contact />

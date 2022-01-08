@@ -1,5 +1,5 @@
 import './Exercises.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useQuery, useMutation } from '@apollo/client';
 import { QUERY_BALL } from '../../utils/queries';
@@ -8,20 +8,21 @@ import Button from '@mui/material/Button';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import { Redirect } from "react-router-dom";
+import Card from '../../Components/shared/Card';
 
 
 import Auth from '../../utils/auth.js';
 
-const Ball = () => {
+const Ball = (modifyKo, setModifyKo) => {
+
   const notify = () => toast("Exercise Added!");
-
-
+  const [exerciseData, setExerciseData] = useState()
   const { loading, data } = useQuery(QUERY_BALL);
-  console.log(data);
-  const exercises = data?.exercises || [];
   const [addExercise, { error }] = useMutation(ADD_EXERCISE);
 
- const handleClick = async (data, e) => {
+
+
+ const handleClick = async (btnData, e) => {
   console.log(e.target);
   let exerciseObjId = e.target.value
   console.log(exerciseObjId);
@@ -40,6 +41,19 @@ const Ball = () => {
 
     console.log(e.target.value, data);
 }
+
+
+useEffect(() => {
+
+  if (!loading && data) {
+    console.log(data.exercises);
+    setExerciseData(data.exercises)
+    setModifyKo(false)
+  }
+
+}, [loading,data])
+
+if(loading) return <h1 className='blank-exercises'>You Haven't Added any Exercises Yet!</h1>
  
   return (
       <div>
@@ -54,24 +68,9 @@ const Ball = () => {
      {/* Card */}
      <div>
 
-      {exercises &&
-        exercises.map((exercise) => (
-          <div key={exercise._id} className="card mb-3">
-            <h4 className="card-header bg-primary text-light p-2 m-0">
-              {exercise.exerciseName} </h4>
-              <br />
-              <div className="card-body bg-light p-2">
-              <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgStart}`} width="40%" height="40%"/>
-            </div>
-            <div className="card-body bg-light p-2">
-            <img src={`/images/exercises/ball/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%"/>
-            </div>
-            <div>
-             <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Add to List</Button>
-               </div>
-                   </div>
-             
-          
+      {exerciseData &&
+        exerciseData?.map((exercise) => (
+          <Card modifyKo={modifyKo} exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
         ))}
       
     </div>

@@ -8,6 +8,7 @@ query getExercises {
     exercisePath
     imgStart
     imgEnd
+    exerciseType
   }
 }
 `;
@@ -20,6 +21,7 @@ query getBandExercises {
     exercisePath
     imgStart
     imgEnd
+    exerciseType
   }
 }
 `;
@@ -32,6 +34,7 @@ query getStretchExercises {
     exercisePath
     imgStart
     imgEnd
+    exerciseType
   }
 }
 `;

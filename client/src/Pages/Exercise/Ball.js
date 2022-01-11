@@ -48,7 +48,6 @@ useEffect(() => {
   if (!loading && data) {
     console.log(data.exercises);
     setExerciseData(data.exercises)
-    setModifyKo(false)
   }
 
 }, [loading,data])
@@ -70,7 +69,7 @@ if(loading) return <h1 className='blank-exercises'>You Haven't Added any Exercis
 
       {exerciseData &&
         exerciseData?.map((exercise) => (
-          <Card modifyKo={modifyKo} exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
+          <Card exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
         ))}
       
     </div>

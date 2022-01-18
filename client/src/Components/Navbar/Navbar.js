@@ -1,5 +1,6 @@
 import './Navbar.css';
 import Auth from '../../utils/auth.js'
+import { NavLink } from 'react-router-dom';
 
 
 
@@ -37,9 +38,9 @@ function Nav() {
 
 
                 <ul>
-                  <li><a className="nav-link scrollto active" href="/">Home</a></li>
-                  <li><a className="nav-link scrollto" href="/exercises">Exercises</a></li>
-                  <li><a className="nav-link scrollto" href="/mylist">My List</a></li>
+                  <li><NavLink className="nav-link scrollto" exact to="/">Home</NavLink></li>
+                  <li><NavLink className="nav-link scrollto" exact to="/exercises">Exercises</NavLink></li>
+                  <li><NavLink className="nav-link scrollto" exact to="/mylist"> My List</NavLink></li>
                   <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
                   <li><a className="nav-link scrollto" onClick={logout}>Logout</a></li>
                 </ul>
@@ -49,7 +50,7 @@ function Nav() {
 
 
                 <ul>
-                  <li><a className="nav-link scrollto active" href="/">Home</a></li>
+                  <li><a className="nav-link scrollto" href="/">Home</a></li>
                   <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
                 </ul>
               </nav>

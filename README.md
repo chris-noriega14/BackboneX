@@ -16,7 +16,7 @@ https://blooming-springs-01456.herokuapp.com/
           width="117"
         />
         <br />
-        Faizila
+        Faizila Amlani
       </a>
     </td>
     <td align="center">
@@ -27,7 +27,7 @@ https://blooming-springs-01456.herokuapp.com/
           width="117"
         />
         <br />
-       Chris
+       Chris Noriega
       </a>
     </td>
     <td align="center">

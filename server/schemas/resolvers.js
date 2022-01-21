@@ -11,6 +11,9 @@ const resolvers = {
     stretchExercises: async (parent, args) => {
       return await Exercise.find({ exerciseType: args.type });
     },
+    video: async (parent, args) => {
+      return await Exercise.find({ exerciseType: args.type });
+    },
     userExercises: async (parent, args) => {
       return await UserExercise.find({ loginEmail: args.type }).populate('exercises');
     },

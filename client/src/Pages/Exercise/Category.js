@@ -45,7 +45,7 @@ function Category() {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
             <div className="icon-box">
               <div className="icon">< BiHourglass/></div>
-              <h4><a href="/exercise">Coming Soon</a></h4>
+              <h4><a href="/exercise/video">Videos(Coming Soon)</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>

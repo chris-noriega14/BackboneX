@@ -11,23 +11,23 @@ const exerciseSchema = new Schema({
   },
   imgStart: {
     type: String,
-    required: true,
+    // required: true,
   },
   imgEnd: {
     type: String,
-    required: true,
+    // required: true,
   },
   exerciseType: {
     type: String,
-    required: true,
+    // required: true,
   },
   startingTip: {
     type: String,
-    required: true,
+    // required: true,
   },
   endingTip: {
     type: String,
-    required: true,
+    // required: true,
   },
   exerciseAuthor: {
     type: String,

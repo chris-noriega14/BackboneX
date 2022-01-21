@@ -10,6 +10,8 @@ import { Redirect } from "react-router-dom";
 import { useEffect, useState } from "react"
 import Card from '../../Components/shared/Card';
 
+
+
 function Mylist() {
   const [exerciseData, setExerciseData] = useState()
   const notify = () => toast("Exercise Deleted!");

@@ -1,23 +1,43 @@
 import './Exercises.css';
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import { useQuery, useMutation } from '@apollo/client';
-import { QUERY_BALL } from '../../utils/queries';
-import { ADD_EXERCISE } from '../../utils/Mutations';
 import Button from '@mui/material/Button';
+import { useQuery, useMutation } from '@apollo/client';
+import { USER_EXERCISES, QUERY_BALL, QUERY_BAND, QUERY_VIDEO, QUERY_STRETCH } from '../../utils/queries';
+import { REMOVE_EXERCISE, ADD_EXERCISE } from '../../utils/Mutations';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Auth from '../../utils/auth.js';
 import { Redirect } from "react-router-dom";
+import { useEffect, useState } from "react"
 import Card from '../../Components/shared/Card';
 
 
-import Auth from '../../utils/auth.js';
 
-const Ball = (modifyKo, setModifyKo) => {
+function SharedPage(categoryState) {
+  const [pageState, setPageState] = useState(QUERY_STRETCH)
+  const [title, setTitle] = useState("Loading...")
+
+  useEffect(() => {
+    let category = categoryState.categoryState
+    console.log(category);
+    if (category === "ball"){
+          setPageState(QUERY_BALL)
+          setTitle("Ball Exercises")
+    }
+    if (category === "band"){
+      setPageState(QUERY_BAND)
+      setTitle("Band Exercises")
+    }
+    if (category === "stretch"){
+      setPageState(QUERY_STRETCH)
+      setTitle("Stretches")
+    }
+  },[] );
+  
 
   const notify = () => toast("Exercise Added!");
   const [exerciseData, setExerciseData] = useState()
-  const { loading, data } = useQuery(QUERY_BALL);
+  const { loading, data } = useQuery(pageState);
+  console.log(data);
   const [addExercise, { error }] = useMutation(ADD_EXERCISE);
 
 
@@ -48,6 +68,7 @@ useEffect(() => {
   if (!loading && data) {
     console.log(data.exercises);
     setExerciseData(data.exercises)
+    console.log(data.exercise);
   }
 
 }, [loading,data])
@@ -63,7 +84,7 @@ if(loading) return <h1 className='blank-exercises'>You Haven't Added any Exercis
       <div className="container">
 
         <div className="section-title">
-        <h1>Ball Exercises</h1>
+        <h1>{title}</h1>
      {/* Card */}
      <div>
 
@@ -83,4 +104,5 @@ if(loading) return <h1 className='blank-exercises'>You Haven't Added any Exercis
   );
 }
 
-export default Ball;
+
+export default SharedPage;

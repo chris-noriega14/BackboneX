@@ -2,7 +2,7 @@
 
 # Heroku Link
 
-https://blooming-springs-01456.herokuapp.com/
+http://www.backboneX.net
 
 # Members
 
@@ -94,6 +94,7 @@ BackBoneX is a web application for chiropractors to help their clients manage th
 * MUI
 * JWT
 * Box Icons
+
 
 # Built With
 

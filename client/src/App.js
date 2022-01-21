@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   ApolloClient,
   InMemoryCache,
@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link  } from 'react-router-dom';
 import './App.css';
 
 
@@ -20,7 +20,8 @@ import Contact from './Components/Contact/Contact'
 import Category from './Pages/Exercise/Category';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
-import Video from './Pages/Exercise/Video';
+import SharedPage from './Pages/Exercise/SharedPage';
+import Video from './Pages/Exercise/Video'
 
 
 // Construct our main GraphQL API endpoint
@@ -47,12 +48,16 @@ const client = new ApolloClient({
 });
 
 function App() {
+  const [modifyKo, setModifyKo] = useState(false)
+
+
+  
   const notify = () => toast("Wow so easy!");
   return (
    
     <ApolloProvider client={client}>
    
-      <Router>
+      <Router forceRefresh>
      
         <div className="flex-column justify-flex-start min-100-vh">
           <Nav />
@@ -61,22 +66,25 @@ function App() {
             <Hero />
           </Route>
           <Route exact path="/exercises">
-            <Category />
+            <Category to="/exercises" />
           </Route>
           <Route exact path="/mylist">
-            <Mylist />
+            <Mylist   />
           </Route>
           <Route exact path="/exercise/ball">
-            <Ball />
+            <Ball    />
           </Route>
           <Route exact path="/exercise/stretch">
-            <Stretch />
+            <Stretch   />
           </Route>
           <Route exact path="/exercise/band">
-            <Band />
+            <Band   />
+          </Route>
+          <Route exact path="/exercise/page">
+            <SharedPage   />
           </Route>
           <Route exact path="/exercise/video">
-            <Video />
+            <Video   />
           </Route>
           {/* </div> */}
           <Contact />

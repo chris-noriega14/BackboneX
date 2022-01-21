@@ -16,7 +16,7 @@ http://www.backboneX.net
           width="117"
         />
         <br />
-        Faizila
+        Faizila Amlani
       </a>
     </td>
     <td align="center">
@@ -27,7 +27,7 @@ http://www.backboneX.net
           width="117"
         />
         <br />
-       Chris
+       Chris Noriega
       </a>
     </td>
     <td align="center">
@@ -94,6 +94,7 @@ BackBoneX is a web application for chiropractors to help their clients manage th
 * MUI
 * JWT
 * Box Icons
+
 
 # Built With
 

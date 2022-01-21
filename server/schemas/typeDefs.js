@@ -20,6 +20,7 @@ type Query {
     exercises (type: String): [Exercise]
     bandExercises (type: String): [Exercise]
     stretchExercises (type: String): [Exercise]
+    video (type: String): [Exercise]
     userExercises (type: String): [UserExercise]
   }
 type Mutation {

@@ -23,6 +23,15 @@ query getBandExercises {
   }
 }
 `;
+export const QUERY_VIDEO = gql`
+query getBandExercises {
+  bandExercises (type: "video") {
+    _id
+    exerciseName
+    exercisePath
+  }
+}
+`;
 
 export const QUERY_STRETCH = gql`
 query getStretchExercises {

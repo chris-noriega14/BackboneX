@@ -26,7 +26,7 @@ query getBandExercises {
 }
 `;
 export const QUERY_VIDEO = gql`
-query getBandExercises {
+query getVideo {
   exercises (type: "video") {
     _id
     exerciseName

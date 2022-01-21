@@ -15,7 +15,7 @@ query getExercises {
 
 export const QUERY_BAND = gql`
 query getBandExercises {
-  bandExercises (type: "band") {
+  exercises (type: "band") {
     _id
     exerciseName
     exercisePath
@@ -27,7 +27,7 @@ query getBandExercises {
 `;
 export const QUERY_VIDEO = gql`
 query getBandExercises {
-  bandExercises (type: "video") {
+  exercises (type: "video") {
     _id
     exerciseName
     exercisePath
@@ -37,7 +37,7 @@ query getBandExercises {
 
 export const QUERY_STRETCH = gql`
 query getStretchExercises {
-  stretchExercises (type: "stretches") {
+  exercises (type: "stretches") {
     _id
     exerciseName
     exercisePath

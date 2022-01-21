@@ -18,7 +18,7 @@ function Card({exerciseData, exercise, handleClick,btnData}) {
                         <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%" />
                       </div>
                       <div>
-                        <Button onClick={handleClick.bind(this, btnData)} value={`${exercise._id}`} variant="contained">Delete</Button>
+                        <Button onClick={handleClick.bind(this, btnData)} value={`${exercise._id}`} variant="contained">Add to My List</Button>
                       </div>
                     </div>
 

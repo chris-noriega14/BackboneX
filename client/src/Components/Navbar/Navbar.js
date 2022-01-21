@@ -38,8 +38,8 @@ function Nav() {
 
 
                 <ul>
-                  <li><NavLink className="nav-link scrollto" exact to="/">Home</NavLink></li>
-                  <li><NavLink className="nav-link scrollto" exact to="/exercises">Exercises</NavLink></li>
+                  <li><NavLink  className="nav-link scrollto" exact to="/">Home</NavLink></li>
+                  <li><NavLink forceRefresh  className="nav-link scrollto" to="/exercises">Exercises</NavLink></li>
                   <li><NavLink className="nav-link scrollto" exact to="/mylist"> My List</NavLink></li>
                   <li><a className="nav-link scrollto" href="#contact">Contact</a></li>
                   <li><a className="nav-link scrollto" onClick={logout}>Logout</a></li>

@@ -20,6 +20,7 @@ import Contact from './Components/Contact/Contact'
 import Category from './Pages/Exercise/Category';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
+import Video from './Pages/Exercise/Video';
 
 
 // Construct our main GraphQL API endpoint
@@ -77,6 +78,9 @@ function App() {
           </Route>
           <Route exact path="/exercise/band">
             <Band   />
+          </Route>
+          <Route exact path="/exercise/video">
+            <Video />
           </Route>
           {/* </div> */}
           <Contact />

@@ -17,7 +17,7 @@ const Video = () => {
   const notify = () => toast("Exercise Added!");
   const { loading, data } = useQuery(QUERY_VIDEO);
   console.log(data);
-  const exercises = data?.bandExercises || [];
+  const exercises = data?.exercises || [];
   const [addExercise, { error }] = useMutation(ADD_EXERCISE);
 
   const handleClick = async (data, e) => {

@@ -11,9 +11,6 @@ import './App.css';
 
 
 import Mylist from '../src/Pages/Exercise/Mylist'
-import Ball from '../src/Pages/Exercise/Ball'
-import Stretch from '../src/Pages/Exercise/Stretch'
-import Band from '../src/Pages/Exercise/Band'
 import Nav from './Components/Navbar/Navbar'
 import Hero from './Components/Hero/Hero'
 import Contact from './Components/Contact/Contact'
@@ -70,15 +67,6 @@ function App() {
           </Route>
           <Route exact path="/mylist">
             <Mylist   />
-          </Route>
-          <Route exact path="/exercise/ball">
-            <Ball    />
-          </Route>
-          <Route exact path="/exercise/stretch">
-            <Stretch   />
-          </Route>
-          <Route exact path="/exercise/band">
-            <Band   />
           </Route>
           <Route exact path="/exercise/page">
             <SharedPage   />

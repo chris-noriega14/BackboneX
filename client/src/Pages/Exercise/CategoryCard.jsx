@@ -18,6 +18,15 @@ function Category() {
   function setBand(){
     setCategoryState("band")
   }
+  function setMyList(){
+    setCategoryState("mylist")
+  }
+  
+  function setVideo(){
+    setCategoryState("video")
+  }
+
+  
 
 
   return (
@@ -28,7 +37,7 @@ function Category() {
 
       <div className="container">
 
-        <div classNameName="section-title">
+        <div className="section-title">
           
           <h1>Exercises</h1>
           <p>Please choose from the following available options:</p>
@@ -62,7 +71,7 @@ function Category() {
           <div className="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="fade-up" data-aos-delay="450">
             <div className="icon-box">
               <div className="icon">< BiHourglass/></div>
-              <h4><a href="/exercise/video">Videos(Coming Soon)</a></h4>
+              <h4><a onClick={setVideo}>Videos (coming soon)</a></h4>
               <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
             </div>
           </div>

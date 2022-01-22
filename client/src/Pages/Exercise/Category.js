@@ -9,9 +9,7 @@ function Category() {
 
   const [categoryState, setCategoryState] = useState("category")
 
-  function setBall(){
-    setCategoryState("ball")
-  }
+ 
 
   return (
     <div>

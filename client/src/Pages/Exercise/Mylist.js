@@ -22,6 +22,8 @@ function Mylist() {
     variables: { loginEmail: loginEmail },
   });
 
+  const buttonText = "Delete"
+
 ;
   const handleClick = async (btnData, e) => {
     console.log(e.target);
@@ -63,8 +65,8 @@ function Mylist() {
               {exerciseData &&
                  exerciseData?.map((exercise) => exercise.exerciseType !== "video" ?  (
           
-                  <Card exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
-                ) : <VideoCard handleClick={handleClick} exercise={exercise}  />)}
+                  <Card buttonText={buttonText} exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
+                ) : <VideoCard buttonText={buttonText} handleClick={handleClick} exercise={exercise}  />)}
             </div>
 
           </div>

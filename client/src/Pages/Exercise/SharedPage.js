@@ -37,6 +37,8 @@ function SharedPage(categoryState) {
       setTitle("Videos")
     }
   },[] );
+
+  const buttonText = "Add to my list"
   
 
   const notify = () => toast("Exercise Added!");
@@ -96,8 +98,8 @@ if(loading) return <h1 className='blank-exercises'>You Haven't Added any Exercis
       {exerciseData &&
         exerciseData?.map((exercise) => exercise.exerciseType !== "video" ?  (
           
-          <Card exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
-        ) : <VideoCard handleClick={handleClick} exercise={exercise}  />)}
+          <Card buttonText={buttonText} exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
+        ) : <VideoCard buttonText={buttonText} handleClick={handleClick} exercise={exercise}  />)}
       
     </div>
     {/* End Card */}

@@ -12,9 +12,11 @@ function Card({buttonText, exerciseData, exercise, handleClick,btnData}) {
                         {exercise.exerciseName}  </h4>
                       <br />
                       <div className="card-body bg-light p-2">
+                        <h3 className="position">Starting Position </h3>
                         <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgStart}`} width="40%" height="40%" />
                       </div>
                       <div className="card-body bg-light p-2">
+                        <h3 className="position">Ending Position </h3>
                         <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%" />
                       </div>
                       <div>

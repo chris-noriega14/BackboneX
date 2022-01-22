@@ -1,7 +1,7 @@
 import React from 'react'
 import Button from '@mui/material/Button';
 
-function Card({exerciseData, exercise, handleClick,btnData}) {
+function Card({buttonText, exerciseData, exercise, handleClick,btnData}) {
    
     
 
@@ -18,7 +18,7 @@ function Card({exerciseData, exercise, handleClick,btnData}) {
                         <img src={`/images/exercises/${exercise.exerciseType}/${exercise.exercisePath}/${exercise.imgEnd}`} width="40%" height="40%" />
                       </div>
                       <div>
-                        <Button onClick={handleClick.bind(this, btnData)} value={`${exercise._id}`} variant="contained">Add to My List</Button>
+                        <Button onClick={handleClick.bind(this, btnData)} value={`${exercise._id}`} variant="contained">{buttonText}</Button>
                       </div>
                     </div>
 

@@ -31,6 +31,7 @@ query getVideo {
     _id
     exerciseName
     exercisePath
+    exerciseType
   }
 }
 `;

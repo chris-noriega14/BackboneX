@@ -9,6 +9,7 @@ import Auth from '../../utils/auth.js';
 import { Redirect } from "react-router-dom";
 import { useEffect, useState } from "react"
 import Card from '../../Components/shared/Card';
+import VideoCard from '../../Components/shared/VideoCard'
 
 
 
@@ -30,6 +31,10 @@ function SharedPage(categoryState) {
     if (category === "stretch"){
       setPageState(QUERY_STRETCH)
       setTitle("Stretches")
+    }
+    if (category === "video"){
+      setPageState(QUERY_VIDEO)
+      setTitle("Videos")
     }
   },[] );
   
@@ -89,9 +94,10 @@ if(loading) return <h1 className='blank-exercises'>You Haven't Added any Exercis
      <div>
 
       {exerciseData &&
-        exerciseData?.map((exercise) => (
+        exerciseData?.map((exercise) => exercise.exerciseType !== "video" ?  (
+          
           <Card exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
-        ))}
+        ) : <VideoCard handleClick={handleClick} exercise={exercise}  />)}
       
     </div>
     {/* End Card */}

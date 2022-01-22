@@ -15,7 +15,7 @@ function Card({exerciseData, exercise, handleClick,btnData}) {
         <iframe width="500" height="500" src={exercise.exercisePath} title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; full-screen; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
       </div>
       <div>
-      {/* <Button onClick={handleClick.bind(this, data)} value={`${exercise._id}`} variant="contained">Add to List</Button> */}
+      <Button onClick={handleClick.bind(this, btnData)} value={`${exercise._id}`} variant="contained">Add to List</Button>
                </div>
     </div>
 

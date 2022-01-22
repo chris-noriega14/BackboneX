@@ -9,6 +9,7 @@ import Auth from '../../utils/auth.js';
 import { Redirect } from "react-router-dom";
 import { useEffect, useState } from "react"
 import Card from '../../Components/shared/Card';
+import VideoCard from '../../Components/shared/VideoCard'
 
 
 
@@ -40,8 +41,9 @@ function Mylist() {
   useEffect(() => {
 
     if (!loading && data) {
-      setExerciseData(data.userExercises[0].exercises)
+      console.log("this is it", data);
       console.log(data.userExercises[0].exercises);
+      setExerciseData(data.userExercises[0].exercises)
     }
 
   }, [loading,data])
@@ -59,9 +61,10 @@ function Mylist() {
             <div className="section-title">
               <h1>My Exercises</h1>
               {exerciseData &&
-                  exerciseData?.map((exercise) => (
-                    <Card handleClick={handleClick} exerciseData={exerciseData} exercise={exercise} />
-                  ))}
+                 exerciseData?.map((exercise) => exercise.exerciseType !== "video" ?  (
+          
+                  <Card exerciseData={exerciseData} handleClick={handleClick}  exercise={exercise} />
+                ) : <VideoCard handleClick={handleClick} exercise={exercise}  />)}
             </div>
 
           </div>

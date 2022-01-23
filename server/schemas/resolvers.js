@@ -38,7 +38,7 @@ const resolvers = {
         exercisePath
       });
       console.log(video);
-        return {exerciseName}
+        return {exerciseName, exerciseType, exercisePath}
     },
     initNewUser: async (parent, { email }) => {
       const loginEmail = UserExercise.create({

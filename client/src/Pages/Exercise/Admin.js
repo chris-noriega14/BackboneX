@@ -16,34 +16,35 @@ import Auth from '../../utils/auth.js';
 
 const Admin = () => {
   const notify = () => toast("Exercise Added!");
-  const { loading, data } = useQuery(QUERY_VIDEO);
-  const exercises = data?.exercises || [];
+  // const { loading, data } = useQuery(QUERY_VIDEO);
+  const exercises =  [];
   const [addVideo, { error }] = useMutation(ADD_VIDEO);
 
   const [exerciseName, setExerciseName] = useState('')
-  const [exerciseUrl, setExerciseUrl] = useState('')
+  const [exercisePath, setExercisePath] = useState('')
   const [exerciseType, setExerciseType] = useState('video')
 
   const handleInputChange =  (e) => {
     const {name, value } = e.target
 
-    name === 'exerciseName' ? setExerciseName(value) : setExerciseUrl(value)
+    name === 'exerciseName' ? setExercisePath(value) : setExerciseName(value)
   };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     try {
+
       const test = await addVideo({
-         variables:{  exerciseName, exerciseUrl, exerciseType  },
+         variables: { exerciseName, exerciseType, exercisePath },
        })
+       console.log(test);
      } catch (err) {
        console.error(err)
-     }
+     } 
      notify()
 
-    alert (`The exercise ${exerciseName} has been added!`)
-    setExerciseName('');
-    setExerciseUrl('');
+    // setExerciseName('');
+    // setExerciseUrl('');
   }
 
   const buttonText = "Delete video from database"

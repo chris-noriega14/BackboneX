@@ -18,7 +18,7 @@ import Category from './Pages/Exercise/Category';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
 import SharedPage from './Pages/Exercise/SharedPage';
-import Video from './Pages/Exercise/Video'
+import Admin from './Pages/Exercise/Admin'
 
 
 // Construct our main GraphQL API endpoint
@@ -71,8 +71,8 @@ function App() {
           <Route exact path="/exercise/page">
             <SharedPage   />
           </Route>
-          <Route exact path="/exercise/video">
-            <Video   />
+          <Route exact path="/exercise/admin">
+            <Admin   />
           </Route>
           {/* </div> */}
           <Contact />

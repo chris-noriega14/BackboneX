@@ -31,6 +31,15 @@ const resolvers = {
         },
       );
     },
+    addVideo: async (parent, { exerciseName, exerciseType, exercisePath }) => {
+      const video = Exercise.create({
+        exerciseName,
+        exerciseType,
+        exercisePath
+      });
+      console.log(video);
+        return {exerciseName, exerciseType, exercisePath}
+    },
     initNewUser: async (parent, { email }) => {
       const loginEmail = UserExercise.create({
         loginEmail: email

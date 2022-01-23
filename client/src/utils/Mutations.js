@@ -7,6 +7,19 @@ export const ADD_EXERCISE = gql`
     }
   }
 `;
+
+export const ADD_VIDEO = gql`
+mutation addVideo($exerciseName: String!, $exerciseType: String!, $exercisePath: String!) {
+  addVideo(exerciseName: $exerciseName, exerciseType: $exerciseType, exercisePath: $exercisePath  ) {
+    _id
+    exerciseName
+    exerciseType
+    exercisePath
+  }
+}
+`;
+
+
 export const INIT_USER = gql`
     mutation initNewUser($email: String!) {
     initNewUser(email: $email) {

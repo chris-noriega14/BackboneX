@@ -26,8 +26,8 @@ const Admin = () => {
 
   const handleInputChange =  (e) => {
     const {name, value } = e.target
-
-    name === 'exerciseName' ? setExercisePath(value) : setExerciseName(value)
+    const reg = /(https:\/\/www.youtube.com\/embed\/)+\w+/g
+    name === 'exerciseName' ? setExercisePath(reg) : setExerciseName(value)
   };
 
   const handleFormSubmit = async (e) => {

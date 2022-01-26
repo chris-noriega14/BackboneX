@@ -2,7 +2,7 @@
 
 # Heroku Link
 
-http://www.backboneX.net
+https://backbone-x.herokuapp.com/
 
 # Members
 

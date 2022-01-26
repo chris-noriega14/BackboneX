@@ -81,6 +81,7 @@ const Admin = () => {
       <TextField onChange={handleInputChange} id="outlined-basic" name='exerciseUrl' label="Video Title" variant="outlined" />
       <br></br>
       <TextField
+          onChange={handleInputChange}
           id="outlined-multiline-static"
           label="YouTube URL"
           name='exerciseName'

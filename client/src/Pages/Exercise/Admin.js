@@ -70,9 +70,11 @@ const Admin = () => {
 
         <div className="section-title">
         <h1>Videos</h1>
+        <h3>Adding a New Video</h3>
         <div>Step 1: Navigate to desired Youtube video and right click</div>
-        <div>Step 2: Copy embedded video from Youtube</div>
-        <div>Step 3: Paste the embedded code to Youtube URL</div>
+        <div>Step 2: Select "Copy embed code" from the available options</div>
+        <div>Step 3: Type in the video title in the first text field</div>
+        <div>Step 4: Paste the embedded code in the text field labeled Youtube URL</div>
         <br></br>
         <div>
           <div className="d-flex flex-column col-8">
